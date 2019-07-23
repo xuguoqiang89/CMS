@@ -1,0 +1,5 @@
+<root>
+  <item name='org.springframework.web.servlet.config.annotation.WebMvcConfigurer'>
+    <annotation name='java.lang.annotation.Deprecated'/>
+  </item>
+</root>

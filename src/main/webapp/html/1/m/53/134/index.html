@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>MCMS-OPEN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/amazeui/2.7.2/css/amazeui.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/iconfont/1.0.0/iconfont.css" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/index.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/base.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/about.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/case-list.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/news-list.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/news-show.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/advice.less" />
+    <script src="http://localhost:8080/ms-mcms/plugins/jquery/1.9.1/jquery-1.9.1.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/amazeui/2.7.2/js/amazeui.min.js"></script>
+    <script src="http://localhost:8080/ms-mcms/templets/1/default/m/js/jiaoben.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/seajs/3.0.0/sea.js"></script>
+    <!--vue-懒加载-表单验证-->
+    <script src="http://localhost:8080/ms-mcms/plugins/vue/2.3.3/vue.min.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/validator/5.5.0/validator.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/m/css/style.css">
+    <script>
+    ms.config({
+        base: "http://localhost:8080/ms-mcms",
+        filter: {
+            people: {
+                loginUrl: 'http://localhost:8080/ms-mcms'
+            }
+        }
+    });
+</script>
+</head>    <body>
+<div class="ms-head">
+    <header data-am-widget="header" class="am-header am-header-default ms-head-background">
+        <div class="am-header-left am-header-nav">
+            <a href="http://localhost:8080/ms-mcms/" class="">
+                <i class="iconfont">&#xe99b;</i>
+            </a>
+        </div>
+        <h1 style="height: 100%;" class="am-header-title ms-header-title">
+            <a href="http://localhost:8080/ms-mcms" class="">
+                <img src="http://localhost:8080/ms-mcms/templets/1/default/m/images/ms.ico">
+            </a>
+        </h1>
+        <nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas>
+            <a href="javascript: void(0)" class="am-menu-toggle ms-head-menu" style="/* height: 55px;line-height: 55px; */">
+                <i class="am-menu-toggle-icon am-icon-bars" style="/* height: 55px;line-height: 55px; */"></i>
+            </a>
+            <div class="am-offcanvas">
+                <div class="am-offcanvas-bar">
+                    <ul class="am-menu-nav am-avg-sm-1">
+                    	<li class="">
+                            <a href="http://localhost:8080/ms-mcms" class="">首页</a>
+                        </li>
+                        <li class="am-parent">
+                            <a href="##" class="">走进铭飞</a>
+                            <ul class="am-menu-sub am-collapse  am-avg-sm-3 ">
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/53/index.html" class="">关于我们</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/59/index.html" class="">公司动态</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://mingsoft.net/html/1//5527/index.html#faz" class="">发展历程</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://mingsoft.net/html/1//5527/index.html#lianx" class="">加入我们</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/19/index.html" class="">联系我们</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="http://localhost:8080/ms-mcms/html/1/m/149/index.html" class="">案例</a>
+                        </li>
+                        <li class="">
+                            <a href="http://mstore.mingsoft.net/mstoreShow.do" class="">模板&插件</a>
+                        </li>
+                        <li class="">
+                            <a href="http://localhost:8080/ms-mcms/html/1/m/19/142/index.html" class="">在线留言</a>
+                        </li>
+                        <li class="am-parent">
+                            <a>技术支持</a>
+                            <ul class="am-menu-sub am-collapse  am-avg-sm-3 ">
+                                <li class="">
+                                    <a href="http://bbs.mingsoft.net/mbbs/main.do" class="">开源社区</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://gitee.com/mingSoft/MCMS" class="">源码下载</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://doc.ms.mingsoft.net/plugs-cms/" class="">使用手册</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>        <div class="ms-banner">
+            <img src="http://localhost:8080/ms-mcms/templets/1/default/m/images/about.png" class="am-img-responsive" alt=""/>
+        </div>
+        <div class="ms-about-content">
+            <div class="am-tabs am-tabs-default ms-about-content-div">
+                <ul class="am-tabs-nav am-cf">
+                    <li class="am-active ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/53/index.html">关于我们</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/59/index.html">公司动态</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://mingsoft.net/html/1//5527/index.html#faz">发展历程</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://mingsoft.net/html/1//5527/index.html#lianx">加入我们</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/19/index.html">联系我们</a>
+                    </li>
+                </ul>
+                <div class="am-tabs-bd ms-about-content-main">
+                    <div data-tab-panel-0 class=""><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal;"><span style="padding: 0px; margin: 0px; font-size: 14px;">互联网品牌推广怎么做？</span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal;">互联网品牌推广有个新鲜名词叫数字营销，数字营销是新发展起来的一种营销模式，是利用互联网特性和技术，更加有效、高性价比地完成整合营销计划，达到传统 的IMC不能达到的高效客户关系管理等，从而精准地实施营销策略，实现企业营销的高效率、低成本、大影响。可以按两种意思来理解：网络整合营销是利用网络 技术和网络特性最大化、最快速、最有效、最精准的进行整合营销；网络整合营销是以为客户提供有价值的信息为基础，由客户创造、传播为主导的整合营销理念进 行的网络营销。</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal;">&nbsp;</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal;"><span style="padding: 0px; margin: 0px; font-size: 14px;">目前品牌在推广上遇到什么问题？</span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal;">作为品牌主，你是否有这样的困惑？<br style="padding: 0px; margin: 0px;"/>● 很早就有了互联网品牌网站，可是却不知如何利用，网络也没有给你创造任何经济效益！<br style="padding: 0px; margin: 0px;"/>● 希望通过网络推广获得效益，但面对市场上纷繁复杂、层出不穷的网络推广概念和方式让人眼花缭乱，却无从下手！<br style="padding: 0px; margin: 0px;"/>● 花了很多钱做网站推广，却没什么效果，也不知道问题出在哪里？<br style="padding: 0px; margin: 0px;"/>● 看到竞争对手迅速壮大，却不知道他们究竟如何利用好网络营销的秘诀？</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; ">&nbsp;</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; "><span style="padding: 0px; margin: 0px; font-size: 14px;">是怎么做的？</span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal;">当我们的客户确定需要进行数字营销传播时，我们将提供以下服务：<br style="padding: 0px; margin: 0px;"/>营销型网站建设，网络调研，搜索引擎营销(SEO和SEM)，软文营销(博客营销、论坛营销、SNS营销、新闻营销、许可邮件营销)，口碑互动营销(圈子 营销、社区营销、博客营销)，群营销(网络广告、论坛营销、SNS营销、IM和QQ群营销)。将以上传播进行有机的整合营销推广，制定传播营销方案。</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; ">一、提供推广资料和目标，提供报价。<br style="padding: 0px; margin: 0px;"/>二、提供营销型网站方案。<br style="padding: 0px; margin: 0px;"/>三、确定传播关键字。<br style="padding: 0px; margin: 0px;"/>四、确定搜索引擎营销策略，进行关键词甩选。<br style="padding: 0px; margin: 0px;"/>五、进行后台数据分析，确定网络广告文案。<br style="padding: 0px; margin: 0px;"/>六、制定病毒式营销计划，确定博客营销、论坛营销、SNS营销载体。<br style="padding: 0px; margin: 0px;"/>七、确定新闻营销、博客营销、论坛营销的整体方案。<br style="padding: 0px; margin: 0px;"/>八、制定网络整合营销传播计划。<br style="padding: 0px; margin: 0px;"/>九、效果评估。<br style="padding: 0px; margin: 0px;"/>十、提供传播报告。</p><p><br/></p></div>
+                </div>
+            </div>
+        </div>
+<div class="ms-footer">
+    <footer class="am-footer am-footer-default">
+        <div class="am-footer-switch ms-footer-div">
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://localhost:8080/ms-mcms/html/1/m/53/index.html">关于我们</a>
+            <span class="am-footer-divider ms-footer-div-a">|</span>
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://mingsoft.net/html/1//5527/index.html#faz">发展历程</a>
+            <span class="am-footer-divider ms-footer-div-a">|</span>
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://localhost:8080/ms-mcms/html/1/m/19/index.html">联系我们</a>
+        </div>
+        <div class="am-footer-miscs ms-footer-copyright">
+            <p>版权所有©铭飞科技有限公司2012-2018保留一切权利</p>
+        </div>
+    </footer>
+</div>    </body>
+</html>

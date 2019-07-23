@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>MCMS-OPEN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/amazeui/2.7.2/css/amazeui.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/iconfont/1.0.0/iconfont.css" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/index.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/base.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/about.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/case-list.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/news-list.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/news-show.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/advice.less" />
+    <script src="http://localhost:8080/ms-mcms/plugins/jquery/1.9.1/jquery-1.9.1.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/amazeui/2.7.2/js/amazeui.min.js"></script>
+    <script src="http://localhost:8080/ms-mcms/templets/1/default/m/js/jiaoben.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/seajs/3.0.0/sea.js"></script>
+    <!--vue-懒加载-表单验证-->
+    <script src="http://localhost:8080/ms-mcms/plugins/vue/2.3.3/vue.min.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/validator/5.5.0/validator.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/m/css/style.css">
+    <script>
+    ms.config({
+        base: "http://localhost:8080/ms-mcms",
+        filter: {
+            people: {
+                loginUrl: 'http://localhost:8080/ms-mcms'
+            }
+        }
+    });
+</script>
+</head>    <body>
+<div class="ms-head">
+    <header data-am-widget="header" class="am-header am-header-default ms-head-background">
+        <div class="am-header-left am-header-nav">
+            <a href="http://localhost:8080/ms-mcms/" class="">
+                <i class="iconfont">&#xe99b;</i>
+            </a>
+        </div>
+        <h1 style="height: 100%;" class="am-header-title ms-header-title">
+            <a href="http://localhost:8080/ms-mcms" class="">
+                <img src="http://localhost:8080/ms-mcms/templets/1/default/m/images/ms.ico">
+            </a>
+        </h1>
+        <nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas>
+            <a href="javascript: void(0)" class="am-menu-toggle ms-head-menu" style="/* height: 55px;line-height: 55px; */">
+                <i class="am-menu-toggle-icon am-icon-bars" style="/* height: 55px;line-height: 55px; */"></i>
+            </a>
+            <div class="am-offcanvas">
+                <div class="am-offcanvas-bar">
+                    <ul class="am-menu-nav am-avg-sm-1">
+                    	<li class="">
+                            <a href="http://localhost:8080/ms-mcms" class="">首页</a>
+                        </li>
+                        <li class="am-parent">
+                            <a href="##" class="">走进铭飞</a>
+                            <ul class="am-menu-sub am-collapse  am-avg-sm-3 ">
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/53/index.html" class="">关于我们</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/59/index.html" class="">公司动态</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://mingsoft.net/html/1//5527/index.html#faz" class="">发展历程</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://mingsoft.net/html/1//5527/index.html#lianx" class="">加入我们</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/19/index.html" class="">联系我们</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="http://localhost:8080/ms-mcms/html/1/m/149/index.html" class="">案例</a>
+                        </li>
+                        <li class="">
+                            <a href="http://mstore.mingsoft.net/mstoreShow.do" class="">模板&插件</a>
+                        </li>
+                        <li class="">
+                            <a href="http://localhost:8080/ms-mcms/html/1/m/19/142/index.html" class="">在线留言</a>
+                        </li>
+                        <li class="am-parent">
+                            <a>技术支持</a>
+                            <ul class="am-menu-sub am-collapse  am-avg-sm-3 ">
+                                <li class="">
+                                    <a href="http://bbs.mingsoft.net/mbbs/main.do" class="">开源社区</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://gitee.com/mingSoft/MCMS" class="">源码下载</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://doc.ms.mingsoft.net/plugs-cms/" class="">使用手册</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>        <div class="ms-banner">
+            <img src="http://localhost:8080/ms-mcms/templets/1/default/m/images/about.png" class="am-img-responsive" alt=""/>
+        </div>
+        <div class="ms-about-content">
+            <div class="am-tabs am-tabs-default ms-about-content-div">
+                <ul class="am-tabs-nav am-cf">
+                    <li class="am-active ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/53/index.html">关于我们</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/59/index.html">公司动态</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://mingsoft.net/html/1//5527/index.html#faz">发展历程</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://mingsoft.net/html/1//5527/index.html#lianx">加入我们</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/19/index.html">联系我们</a>
+                    </li>
+                </ul>
+                <div class="am-tabs-bd ms-about-content-main">
+                    <div data-tab-panel-0 class=""><p><span style="color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">&nbsp;</span><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">广州规划设计在为客户提供市场分析和战略规划服务的基础上，确保初步规划和概念逐渐成形最终落地运营的产品。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">广州</span><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">规划设计的业务范畴主要集中在旅游规划、城市规划、建筑设计与景观设计，构筑了策划、规划、设计、营销、资本引进与管理咨询等全程服务。同时，帮助客户了解市场行情、评估风险、厘清发展计划、商业战略和公共政策内在的不确定因素。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">广州</span><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">规划设计在打造景区特色、建立生态系统、营造文化环境等多领域都有着不可撼动的行业地位，规划业务服务集中在总体规划、城市规划、区域规划、旅游商业模式策划、生态环境规划、城市战略规划等。根据项目的不同尺度和背景，有选择地搭配合适的各项专业人才团队，为客户提供全面而合理的解决方案</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"><br style="margin: 0px; padding: 0px; border: 0px;"/>广州规划设计与国际行业组织、海内外同行及国内知名高等院校如香港大学、中山大学、同济大学、广东财经大学等建立和保持着密切的合作与互动关系，致力于整合行业高端智慧，引进行业优质资源，推动中国旅游业迈向更高的竞争层次。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;">&nbsp;</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"><br/></p><h1 style="margin: 0px; padding: 0px; border: 0px; font-size: 12px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 25px; text-align: justify; white-space: normal;">经营哲学：</h1><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"><br/></p><p><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">用智慧与资本描摹设计蓝图</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">中国旅游业已经跨入互联网时代的大门中，互联网正在彻底颠覆传统咨询业的知识架构和业务模式，CEDAR站在互联网大潮的浪尖上，以高瞻的视角描摹着旅游行业的发展蓝图。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">&nbsp; &nbsp; &nbsp; ●&nbsp;产业联动</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">互联网时代正在颠覆旅游业传统的商业模式。CEDAR积极应对这种变革，依托中欧国际旅游规划设计研究院（SEATPD）的资源优势，推动文化、地产与旅游业的横向联合发展，以此延伸到移动互联、绿色农业、金融资本、现代物流业等产业领域。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">&nbsp; &nbsp; &nbsp; ●&nbsp;搭建平台</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">互联网时代的行业生态系统也在发生着改变。以往单一、专业式的服务模式不再为客户所青睐，CEDAR创新构建协同式、交互式、大数据、系统服务式的行业平台，整合行业各专业领域的优势资源，基于共同的平台进行专业协作，为旅游业提供一揽子系统化的解决方案。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">&nbsp; &nbsp; &nbsp; ●&nbsp;金融孵化</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">大平台的背后是高度的智慧与资源整合，更是金融资本的有效支撑。CEDAR协助旅游企业开发设计植入性产品，做好定制化产品的孵化，开展引资融资服务，帮助客户在产业版图拓展中淘金。同时，以规划设计为撬动点，通过小资本或技术入股，撬动大资本大产业。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/></p><h1 style="margin: 0px; padding: 0px; border: 0px; font-size: 12px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 25px; text-align: justify; white-space: normal;">服务能力：</h1><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;">&nbsp; &nbsp; &nbsp;</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;">&nbsp; &nbsp; &nbsp;</p><h1 style="margin: 0px; padding: 0px; border: 0px; font-size: 12px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 25px; text-align: justify; white-space: normal;">产业咨询：</h1><p><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">CEDAR专家以宏观、战略、系统、科学、可操作性的视角，为客户提供产业整体发展咨询，服务涉及项目的前期市场研究、战略定位、产品开发、空间结构规划、区域规划、旅游品牌营销到景区的企业管理、企业文化、人力资源等全方位一揽子主导整合服务。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><strong style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;">规划设计</strong><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">CEDAR规划设计包括旅游区及城市商业综合体的景观设计、建筑设计及环境文化设计。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">我们主张设计创新，试图对每一处场景赋予独一无二的精神，并合理地对景观建筑、规划资源进行配置与优化，加强景观、建筑与规划领域的互动，为客户提供从城市规划、建筑设计到景观设计的全程化、一体化、专业化解决方案。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><strong style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;">品牌营销</strong><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">&nbsp;CEDAR依托团队丰富的品牌管理与营销策划能力，为旅游品牌提供从市场研究、品牌形象策划、整合营销传播、公共关系到节事会展营销等整合系统服务。</span><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><strong style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;">资本运作</strong><br style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify; white-space: normal;"/><span style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; line-height: 25px; text-align: justify;">CEDAR不仅推动规划设计的科学前瞻，更愿意借助中欧国际旅游规划设计研究院（SEATPD）的国际背景、宽厚人脉及资源整合力，打造旅游企业的金融孵化平台，通过“咨询管理+ 资本运作”的模式，为旅游业发展引进资本、人才、管理体系、商业模式、企业文化、市场营销等综合支撑。</span></p><p><br/></p></div>
+                </div>
+            </div>
+        </div>
+<div class="ms-footer">
+    <footer class="am-footer am-footer-default">
+        <div class="am-footer-switch ms-footer-div">
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://localhost:8080/ms-mcms/html/1/m/53/index.html">关于我们</a>
+            <span class="am-footer-divider ms-footer-div-a">|</span>
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://mingsoft.net/html/1//5527/index.html#faz">发展历程</a>
+            <span class="am-footer-divider ms-footer-div-a">|</span>
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://localhost:8080/ms-mcms/html/1/m/19/index.html">联系我们</a>
+        </div>
+        <div class="am-footer-miscs ms-footer-copyright">
+            <p>版权所有©铭飞科技有限公司2012-2018保留一切权利</p>
+        </div>
+    </footer>
+</div>    </body>
+</html>

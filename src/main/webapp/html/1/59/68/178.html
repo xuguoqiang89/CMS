@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MCMS-OPEN</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/iconfont/1.0.0/iconfont.css" />
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/base.less">
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/index.less">
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/advice.less">
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/case-list.less">
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/about.less">
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/news-list.less">
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/news-show.less">
+<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/center.less">
+<script src="http://localhost:8080/ms-mcms/plugins/jquery/1.9.1/jquery-1.9.1.js"></script>
+<script src="http://localhost:8080/ms-mcms/templets/1/default/js/slider.js"></script>
+<script src="http://localhost:8080/ms-mcms/static/plugins/less/3.9.0/less.min.js"></script>
+<!--vue-懒加载-表单验证-->
+<script src="http://localhost:8080/ms-mcms/plugins/vue/2.6.9/vue.min.js"></script>
+<script src="http://localhost:8080/ms-mcms/plugins/validator/10.8.0/validator.min.js"></script>
+<!-- Element -->
+<link rel="stylesheet" href="http://localhost:8080/ms-mcms/plugins/element-ui/2.8.2/index.css">
+<script src="http://localhost:8080/ms-mcms/plugins/element-ui/2.8.2/index.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/css/animate.css">
+<script src="http://localhost:8080/ms-mcms/static/plugins/axios/0.18.0/axios.min.js"></script>
+<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.js"></script>
+<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.http.js"></script>
+<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.util.js"></script>
+<script src="http://localhost:8080/ms-mcms/api/ms.people.min.js"></script>
+<script src="http://localhost:8080/ms-mcms/static/plugins/plupload/plupload.full.min.js"></script>
+<script src="http://localhost:8080/ms-mcms/static/plugins/qs/6.6.0/qs.min.js"></script>
+<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.upload.js"></script>
+<script>
+	window.http = ms.http;
+	ms.base = "http://localhost:8080/ms-mcms";
+	ms.login = 'http://localhost:8080/ms-mcms';
+</script>        <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/css/jquery.sinaemotion.css" />
+        <script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/default/js/jquery.sinaEmotion.js"></script>
+    </head>
+
+    <body>
+<div class="ms-head">
+    <div class="head-menu">
+        <div class="head-men-left head-menu-flex-center">
+            <a href="http://localhost:8080/ms-mcms/html/1/index.html">
+                <img src="http://cdn.mingsoft.net/images/logo.png" />
+            </a>
+            <ul class="head-menu-list">
+                <li class="head-menu-list-li">走进铭飞
+                    <ul class="head-menu-son-list">
+                        <li>
+                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//53/index.html'>关于我们</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//59/index.html'>公司动态</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>发展历程</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>加入我们</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//19/141/index.html'>联系我们</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="head-menu-list-li">
+                    <a href='http://localhost:8080/ms-mcms/html/1//149/index.html'>案例</a>
+                </li>
+                <li class="head-menu-list-li">
+                    <a target="_blank" href='http://mstore.mingsoft.net/mstoreShow.do'>插件&模板</a>
+                    <!-- <ul class="head-menu-son-list">
+                        <li><a href='http://mstore.mingsoft.net/mstoreShow.do'>模板</a></li>
+                        <li><a href='http://mstore.mingsoft.net/mstoreShow.do'>插件</a></li>
+                    </ul> -->
+                </li>
+                <li class="head-menu-list-li">
+                    <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//19/142/index.html'>在线留言</a>
+                </li>
+                <li class="head-menu-list-li">技术支持
+                    <ul class="head-menu-son-list">
+                        <li>
+                            <a target="_blank" href='http://bbs.mingsoft.net/mbbs/main.do'>开源社区</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href='https://gitee.com/mingSoft/MCMS'>源码下载</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href='http://doc.ms.mingsoft.net/plugs-cms/'>使用手册</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="head-men-right head-menu-flex-center">
+            <div class="head-menu-flex-center head-menu-right-search">
+                <form id="searchDataForm" action="http://localhost:8080/ms-mcms/cms/1/search.do" method="post">
+                    <input type="text" class='ms-search-input' name="basic_title" placeholder="请输入关键字">
+                    <!-- <i class="iconfont ms-search-click">&#xe85e;</i> -->
+                    <input type="submit" value="" class="ms-search-click">
+                </form>
+            </div>
+            <div class="head-menu-right-content" id="ms-login-vue">
+                <span v-show="!isLogin" style="display: none;">
+                    <span>
+                        <a href='http://localhost:8080/ms-mcms/mcms/login.do'>登录</a>
+                    </span>|<span><a href='http://localhost:8080/ms-mcms/mcms/register.do'>注册</a></span>
+                </span>
+                <div class="topbar-info J_userInfo loginSuccess hide-default" v-show="isLogin" style="display: none;">
+                    <a class="user-name" href="http://localhost:8080/ms-mcms/people/center.do">
+                        <img :src="'http://localhost:8080/ms-mcms/'+peopleInfo.puIcon" class="loginImg user_icon" onerror="this.src='http://cdn.mingsoft.net/global/images/msheader.png'">
+                        <b class="userName ms-userName" v-text="peopleInfo.puNickname"></b>
+                    </a>
+                    <a href="javascript:;" class="quitLogin" @click="quitLogin">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var headVue = new Vue({
+        el: "#ms-login-vue",
+        data: {
+            isLogin: "", //登录状态
+            peopleInfo: "", //个人信息
+            imgUrl:"",
+        },
+        
+        mounted: function() {
+            //获取个人信息
+            var target = this;
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/ms-mcms/checkLoginStatus.do",
+                success: function(msg) {
+                    target.isLogin = msg.result;  //判断用户是否登录，如登录，则target.isLogin===true
+                    if(msg.result) {
+                        $.ajax({
+                            type: "GET",
+                            url: "http://localhost:8080/ms-mcms/people/user/info.do",
+                            success: function(msg) {
+                                target.peopleInfo = msg;  //target.peopleInfo为当前登录用户的基本信息
+                            }
+                        })
+                    }
+                }
+            })
+        },
+        methods: {
+            //退出登录
+            quitLogin: function() {
+                var target = this;
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:8080/ms-mcms/people/quit.do",
+                    success: function(msg) {
+                        if(msg.result) {
+                            $("body").append("<form id='msHeadForm' action=''></form>");
+                            $("#msHeadForm").attr("action", "http://localhost:8080/ms-mcms").submit();
+                        }
+                    }
+                })
+            },
+        },
+    })
+    
+    /* $(function(){
+        var r=location.href;
+          if(r.match("53")){
+          $(".head-menu-list-li").removeClass("head-active");
+          $(".head-menu-list-li").eq(0).addClass("head-active");
+        }else if(r.match("141")){
+          $(".head-menu-list-li").removeClass("head-active");
+          $(".head-menu-list-li").eq(0).addClass("head-active");
+        }else if(r.match("59")){
+          $(".head-menu-list-li").removeClass("head-active");
+          $(".head-menu-list-li").eq(0).addClass("head-active");
+        }else if(r.match("155")){
+          $(".head-menu-list-li").removeClass("head-active");
+          $(".head-menu-list-li").eq(1).addClass("head-active");
+        }else if(r.match("142")){
+            $(".head-menu-list-li").removeClass("head-active");
+            $(".head-menu-list-li").eq(3).addClass("head-active");
+          }
+      }) */
+</script>        <div class="ms-banner" style="background:url(http://localhost:8080/ms-mcms/templets/1/defaultimages/news2.png) no-repeat center;">
+            <p class="banner_tit_other animated fadeInLeft">公司动态</p>
+            
+            <p class="banner_tit_other_des animated fadeInRight">Our company</p>
+        </div>
+        <div class="ms-content-about" id="news-show-vue">
+            <div class="ms-content-main">
+<div class="ms-content-left">
+    <div class="ms-content-left-title">走进铭飞</div>
+    <ul class="ms-content-left-ul">
+       	<a target="_blank" href='http://localhost:8080/ms-mcms/html/1//53/index.html'>
+       		<li>关于我们<span class="ms-content-left-li-more">></span></li>
+       	</a>
+        <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//59/index.html'>
+        	<li>公司动态<span class="ms-content-left-li-more">></span></li>
+        </a>
+        <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>
+        	<li>发展历程<span class="ms-content-left-li-more">></span></li>
+        </a>
+        <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>
+        	<li>加入我们<span class="ms-content-left-li-more">></span></li>
+        </a>
+        <a target="_blank" href=http://localhost:8080/ms-mcms/html/1//19/141/index.html>
+        	<li>联系我们<span class="ms-content-left-li-more">></span></li>
+        </a>
+    </ul>
+</div>
+<script>
+$(function(){
+    var r=location.href;
+      if(r.match("53")){
+      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
+      $(".ms-content-left-ul a").eq(0).addClass("ms-content-left-li-first");
+    }else if(r.match("19")){
+      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
+      $(".ms-content-left-ul a").eq(4).addClass("ms-content-left-li-first");
+    }else if(r.match("59")){
+      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
+      $(".ms-content-left-ul a").eq(1).addClass("ms-content-left-li-first");
+    }
+  })
+</script>                <div class="ms-content-right">
+                    <div class="ms-content-right-position">
+                        <a href="http://localhost:8080/ms-mcms">首页</a>
+                        <span>></span>
+                        <a href="index.html">公司新闻</a>
+                    </div>
+                    <div class="ms-content-right-main">
+                        <div class="ms-content-right-main-title" id="ms-content-right-main-title">
+                            <div class="ms-content-right-main-title-div">价值源自分享</div>
+                            <div class="ms-content-right-main-icon">
+                                <div class="ms-content-icon-left">
+                                    <div class="ms-content-right-main-icon-source">来源：来自火星的程序猿
+                                        <span class="ms-content-right-vertical">|</span>
+                                    </div>
+                                    <div class="ms-content-right-main-icon-time">时间：2028-01-01</div>
+                                </div>
+                                <div class="ms-content-icon-right">
+                                    <div class="ms-content-right-main-icon-clicks"></div>
+                                    <div class="ms-content-right-main-icon-num"><script type='text/javascript' src='http://localhost:8080/ms-mcms/basic/178/hit.do'></script>
+                                        <span class="ms-content-right-vertical">|</span>
+                                    </div>
+                                    <div class="ms-content-right-main-icon-comment"></div>
+                                    <div class="ms-content-right-main-icon-num">
+                                        <span style="margin: 0;" v-text="commentsList.length"></span>
+                                        <span class="ms-content-right-vertical">|</span>
+                                    </div>
+                                    <div class="ms-content-right-main-icon-Fabulous"></div>
+                                    <div class="ms-content-right-main-icon-num" v-text="attentionNum"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms-content-right-main-content">
+                            <p><p><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">MStore（铭飞商城）是铭飞（MS）平台为开发者提供模版与插件作品分享平台,为企业提供优质产品和服务我们致力于打造一个优秀的Java资源共享学习平台。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><strong style="box-sizing: border-box; white-space: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">MStore离不开您的参与，<br style="box-sizing: border-box;"/>如果您是开发者（前端&amp;后台）</strong><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">：</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px;">1.要分享自己的得意模板、插件、教程？欢迎您来这里，找到需要她、欣赏她的人。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px;">2.想找个网络模板收藏夹存放自己喜爱的模板？ 这里就是您的选择。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px; "/><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">3.想结交更多热爱模板、插件的朋友？那就快来展示您的作品，寻找志趣相投的朋友吧。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><strong style="box-sizing: border-box; white-space: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">如果您是企业：</strong><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px;">1.这里有一群精力旺盛有着代码执着追求的开发者分享的模版与插件，相信他们肯定为您提供更好的服务。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px;">2.更多Java coder分享的更多插件，满足您各种项目需求，降低开发与维护成本。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">3.这里有专业设计人员提供的更多精美模版，帮您省去设计投入成本。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">4.同时也希望您为分享者点个赞。</span><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px;"/><br style="box-sizing: border-box; white-space: normal; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; font-size: 14px; line-height: 23px; "/><strong style="box-sizing: border-box; white-space: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; color: rgb(114, 114, 114); font-family: &#39;Open Sans&#39;, sans-serif; line-height: 23px; ">铭飞已经上路，我们将为此不懈努力，期待得到您的支持！</strong></p></p><br/>
+                        </div>
+                        <div class="metfield">
+					        <p>上一篇：<a href="http://localhost:8080/ms-mcms/html/1//59/68\74.html">国内java开源bbs系统</a></p>
+					        <p>下一篇：<a href="http://localhost:8080/ms-mcms/html/1//59/68\179.html">铭飞商城MStore——价值源自分享</a></p>
+					    </div>
+                    </div>
+                    <div class="ms-content-right-main-content-Fabulous">
+                        <div class="ms-content-right-main-content-icon" @click="attentionNews" :class="{'ms-is-attention':isAttention}"></div>
+                    </div>
+                    <div class="ms-content-right-comment">
+                        <div class="ms-content-right-comment-input">
+                            <textarea v-model='isButAttention' class="emotion" type="text" name="comments" placeholder="我有话说..."></textarea>
+                            <div class="ms-content-right-comment-button">
+                                <div class="ms-content-right-comment-expression" id="ms-face"></div>
+                                <div class="ms-content-right-comment-submit" :class="{'ms-submit-comments-css':isButAttention.length>0}" @click="submitComments">提交</div>
+                            </div>
+                        </div>
+                        <div class="ms-content-right-comment-list">
+                            <div class="ms-content-right-comment-list-no-comment" style="display: none;" v-show="commentsList.length == 0">
+                                <img src="http://localhost:8080/ms-mcms/templets/1/default/images/no-comment.png">
+                            </div>
+                            <template v-for="(comments,index) in commentsList">
+                                <div class="ms-content-right-comment-list-div" v-if="index <= listNum">
+                                    <div class="ms-content-right-comment-list-left">
+                                        <div class="ms-content-right-comment-list-portrait">
+                                            <img :src="'http://localhost:8080/ms-mcms'+ comments.puIcon" onerror="this.src='http://cdn.mingsoft.net/global/images/msheader.png'">
+                                        </div>
+                                        <div class="ms-content-right-comment-list-content">
+                                            <div class="ms-content-right-comment-list-name" v-text="comments.puNickname"></div>
+                                            <div class="ms-content-right-comment-list-comment" v-html="vueAnalyticEmotion(comments.commentContent)"></div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="ms-content-right-comment-list-right">
+                                        <div class="ms-content-right-main-icon-comment"></div>
+                                        <div class="ms-content-right-main-icon-Fabulous"></div>
+                                        <div class="ms-content-right-main-icon-num">28</div>
+                                    </div>-->
+                                </div>
+                            </template>
+                            <div class="ms-content-right-comment-list-div ms-content-right-active">
+                                <div class="ms-content-right-comment-list-div-more" @click="listNum = listNum +4" v-show="listNum < commentsList.length">
+                                    查看更多评论
+                                </div>
+                                <div class="ms-content-right-comment-list-div-no" v-show="listNum >= commentsList.length && commentsList.length != 0">
+                                    没有更多评论
+                                </div>
+                                <div class="ms-content-right-comment-list-div-load" style="display: none;">
+                                    <img src="http://localhost:8080/ms-mcms/templets/1/default/images/loading.gif">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="ms-footer">
+    <div class="ms-footer-content">
+        <div class="ms-footer-left">
+            <div class="ms-footer-left-column">
+                <span class="ms-footer-left-column-about">
+                	<a href='http://localhost:8080/ms-mcms/html/1//53/index.html'>关于我们</a>
+                </span>|
+                <span class="ms-footer-left-column-course">
+                	<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>发展历程</a>
+                </span>|
+                <span class="ms-footer-left-column-contact">
+                	<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>联系我们</a>
+                </span>
+            </div>
+            <span class="ms-footer-left-copyright">版权所有&copy;铭飞科技有限公司2012-2018保留一切权利</span>
+        </div>
+        <div class="ms-footer-right">
+            <img class='ms-footer-right-img-weixin' src="http://localhost:8080/ms-mcms/templets/1/default/images/we-chat.png">
+            <a target="_blank" href='http://tieba.baidu.com/f?kw=%E9%93%AD%E9%A3%9E%E7%A7%91%E6%8A%80&fr=index&fp=0&ie=utf-8'><img class="ms-footer-right-baidu" src="http://localhost:8080/ms-mcms/templets/1/default/images/baidu.png"></a>
+            <a target="_blank" href='http://weibo.com/killfen'><img src="http://localhost:8080/ms-mcms/templets/1/default/images/micro-blog.png"></a>
+        	<div class="ms-footer-right-weixin">
+        		<p></p>
+        		<img alt="" src="http://localhost:8080/ms-mcms/templets/1/default/images/weixin.jpg">
+        	</div>
+        </div>
+    </div>
+</div>
+<script>
+/*导航下拉*/
+$(function(){
+    $(".head-menu-list-li").hover(function(){
+        $(this).find(".head-menu-son-list").fadeToggle();
+    });
+    $('.ms-footer-right-img-weixin').hover(function(){
+    	$('.ms-footer-right-weixin').toggle();
+    });
+});
+
+</script>    </body>
+    <script>
+        var newsShowVue = new Vue({
+            el: "#news-show-vue",
+            data: {
+                commentsList: [], //评论列表
+                attentionNum: 0, //点赞数
+                isAttention: false, //点赞状态
+                isButAttention: '', //按钮状态
+                listNum: 4, //列表数
+                loginStatus: '', //登录状态
+                vueAnalyticEmotion: function(val) {
+                    return AnalyticEmotion(val);
+                },
+            },
+            methods: {
+                //关注或者取消
+                attentionNews: function() {
+                    var obj = this;
+                    if(this.loginStatus != true) {
+                        alert("请先登录后重试");
+                        return;
+                    }
+                    if(obj.isAttention == false) {
+                        $.ajax({
+                            type: "POST",
+                            data: "basicAttentionBasicId=178&basicAttentionType=2",
+                            url: "http://localhost:8080/ms-mcms/people/attention/save.do",
+                            success: function(msg) {
+                                if(msg.result) {
+                                    obj.attentionNum++;
+                                    obj.isAttention = true;
+                                }
+                            },
+                            error: function() {
+                                alert("操作失败，请检查是否已经安装关注插件");
+                            }
+                        })
+                    } else {
+                        $.ajax({
+                            type: "POST",
+                            data: "basicId=178&basicAttentionType=2",
+                            url: "http://localhost:8080/ms-mcms/people/attention/delete.do",
+                            success: function(msg) {
+                                if(msg.result) {
+                                    obj.attentionNum--;
+                                    obj.isAttention = false;
+                                }
+                            },
+                            error: function() {
+                                alert("操作失败，请检查是否已经安装关注插件");
+                            }
+                        })
+                    }
+                },
+                //关注
+                list: function() {
+                    var obj = this;
+                    $.ajax({
+                        type: "POST",
+                        data: "commentBasicId=178",
+                        url: "http://localhost:8080/ms-mcms/comment/list.do",
+                        success: function(msg) {
+                            obj.commentsList = msg.list;
+                        }
+                    })
+                },
+                //提交
+                submitComments: function() {
+                    if(this.isButAttention == '') {
+                        return;
+                    }
+                    if(this.loginStatus != true) {
+                        alert("请先登录后重试");
+                        return;
+                    }
+                    var obj = this;
+                    $.ajax({
+                        type: "POST",
+                        data: "commentContent=" + $("textarea[name=comments]").val() + "&isCode=false&commentBasicId=178",
+                        url: "http://localhost:8080/ms-mcms/people/comment/save.do",
+                        success: function(msg) {
+                            if(msg.result) {
+                                alert("评论成功");
+                                obj.list();
+                            } else {
+                                alert(msg.resultMsg);
+                            }
+                            obj.isButAttention = '';
+                        },
+                        error: function() {
+                            alert("评论失败，请检查是否已经安装评论插件");
+                        },
+                    })
+                }
+            },
+            mounted: function() {
+                $('#ms-face').SinaEmotion($('.emotion'));
+                var obj = this;
+                //登录状态
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:8080/ms-mcms/checkLoginStatus.do",
+                    success: function(msg) {
+                        obj.loginStatus = msg.result;
+                    }
+                })
+
+                //关注数
+                $.ajax({
+                    type: "POST",
+                    data: "basicAttentionBasicId=178&basicAttentionType=2",
+                    url: "http://localhost:8080/ms-mcms/attention/count.do",
+                    success: function(msg) {
+                        obj.attentionNum = msg;
+                    }
+                })
+                //是否关注了
+                $.ajax({
+                    type: "POST",
+                    data: "basicAttentionBasicId=178&basicAttentionType=2",
+                    url: "http://localhost:8080/ms-mcms/people/attention/isExists.do",
+                    success: function(msg) {
+                        obj.isAttention = msg.result;
+                    }
+                })
+            },
+            beforeCreate: function() {
+                var obj = this;
+                var app_id = '1362404091';
+                $.ajax({
+                    async: true,
+                    dataType: 'jsonp',
+                    url: 'https://api.weibo.com/2/emotions.json?source=' + app_id,
+                    success: function(response) {
+                        var data = response.data;
+                        for(var i in data) {
+                            if(data[i].category == '') {
+                                data[i].category = '默认';
+                            }
+                            if(emotions[data[i].category] == undefined) {
+                                emotions[data[i].category] = new Array();
+                                categorys.push(data[i].category);
+                            }
+                            emotions[data[i].category].push({
+                                name: data[i].phrase,
+                                icon: data[i].icon
+                            });
+                            uSinaEmotionsHt.put(data[i].phrase, data[i].icon);
+                        }
+                        obj.list();
+                    }
+                });
+            },
+        })
+    </script>
+
+</html>

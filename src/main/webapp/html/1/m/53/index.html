@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>MCMS-OPEN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/amazeui/2.7.2/css/amazeui.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/iconfont/1.0.0/iconfont.css" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/index.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/base.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/about.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/case-list.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/news-list.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/news-show.less" />
+    <link rel="stylesheet" type="text/less" href="http://localhost:8080/ms-mcms/templets/1/default/m/less/advice.less" />
+    <script src="http://localhost:8080/ms-mcms/plugins/jquery/1.9.1/jquery-1.9.1.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/amazeui/2.7.2/js/amazeui.min.js"></script>
+    <script src="http://localhost:8080/ms-mcms/templets/1/default/m/js/jiaoben.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/seajs/3.0.0/sea.js"></script>
+    <!--vue-懒加载-表单验证-->
+    <script src="http://localhost:8080/ms-mcms/plugins/vue/2.3.3/vue.min.js"></script>
+    <script src="http://localhost:8080/ms-mcms/plugins/validator/5.5.0/validator.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/m/css/style.css">
+    <script>
+    ms.config({
+        base: "http://localhost:8080/ms-mcms",
+        filter: {
+            people: {
+                loginUrl: 'http://localhost:8080/ms-mcms'
+            }
+        }
+    });
+</script>
+</head>    <body>
+<div class="ms-head">
+    <header data-am-widget="header" class="am-header am-header-default ms-head-background">
+        <div class="am-header-left am-header-nav">
+            <a href="http://localhost:8080/ms-mcms/" class="">
+                <i class="iconfont">&#xe99b;</i>
+            </a>
+        </div>
+        <h1 style="height: 100%;" class="am-header-title ms-header-title">
+            <a href="http://localhost:8080/ms-mcms" class="">
+                <img src="http://localhost:8080/ms-mcms/templets/1/default/m/images/ms.ico">
+            </a>
+        </h1>
+        <nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas>
+            <a href="javascript: void(0)" class="am-menu-toggle ms-head-menu" style="/* height: 55px;line-height: 55px; */">
+                <i class="am-menu-toggle-icon am-icon-bars" style="/* height: 55px;line-height: 55px; */"></i>
+            </a>
+            <div class="am-offcanvas">
+                <div class="am-offcanvas-bar">
+                    <ul class="am-menu-nav am-avg-sm-1">
+                    	<li class="">
+                            <a href="http://localhost:8080/ms-mcms" class="">首页</a>
+                        </li>
+                        <li class="am-parent">
+                            <a href="##" class="">走进铭飞</a>
+                            <ul class="am-menu-sub am-collapse  am-avg-sm-3 ">
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/53/index.html" class="">关于我们</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/59/index.html" class="">公司动态</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://mingsoft.net/html/1//5527/index.html#faz" class="">发展历程</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://mingsoft.net/html/1//5527/index.html#lianx" class="">加入我们</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://localhost:8080/ms-mcms/html/1/m/19/index.html" class="">联系我们</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="http://localhost:8080/ms-mcms/html/1/m/149/index.html" class="">案例</a>
+                        </li>
+                        <li class="">
+                            <a href="http://mstore.mingsoft.net/mstoreShow.do" class="">模板&插件</a>
+                        </li>
+                        <li class="">
+                            <a href="http://localhost:8080/ms-mcms/html/1/m/19/142/index.html" class="">在线留言</a>
+                        </li>
+                        <li class="am-parent">
+                            <a>技术支持</a>
+                            <ul class="am-menu-sub am-collapse  am-avg-sm-3 ">
+                                <li class="">
+                                    <a href="http://bbs.mingsoft.net/mbbs/main.do" class="">开源社区</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://gitee.com/mingSoft/MCMS" class="">源码下载</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://doc.ms.mingsoft.net/plugs-cms/" class="">使用手册</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>        <div class="ms-banner">
+            <img src="http://localhost:8080/ms-mcms/templets/1/default/m/images/about.png" class="am-img-responsive" alt=""/>
+        </div>
+        <div class="ms-about-content">
+            <div class="am-tabs am-tabs-default ms-about-content-div">
+                <ul class="am-tabs-nav am-cf">
+                    <li class="am-active ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/53/index.html">关于我们</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/59/index.html">公司动态</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://mingsoft.net/html/1//5527/index.html#faz">发展历程</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://mingsoft.net/html/1//5527/index.html#lianx">加入我们</a>
+                    </li>
+                    <li class="ms-about-content-li">
+                        <a href="http://localhost:8080/ms-mcms/html/1/m/19/index.html">联系我们</a>
+                    </li>
+                </ul>
+                <div class="am-tabs-bd ms-about-content-main">
+                    <div data-tab-panel-0 class=""><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="padding: 0px; margin: 0px; font-size: 14px;">网站整体策划</span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">企业网站建设目的何在？如何充分挖掘互联网络的资源和优势，如何合理地组织网站内容与功能从而达到客户的需求？<br style="padding: 0px; margin: 0px;"/>我们将根据市场分析、客户产品及服务的优势、竞争对手分析等等，有效的确立网站定位。根据相关需求分析获得相应网站运营策略，在网站建立之初我们就网站VI形象、网站营销手段、运营模式、网站发展前景等等进行定位。</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="padding: 0px; margin: 0px; font-size: 14px;">网站设计&nbsp;<span style="padding: 0px; margin: 0px; color: rgb(255, 0, 0);">DESIGN</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">网络媒体不同于传统媒体，如果在网站设计的时候仅仅是将文字和图片做一个简单堆积和展示的话，这样的网站跟一片丢落在街头的破旧宣传资料没有任何区别。客户往往通过企业网站就留下了对企业的第一印象，这个第一印象是决定客户是否与你合作的重要因素。<br style="padding: 0px; margin: 0px;"/>所以在浏览者的角度，我们分析企业特点和品牌内涵，完美的通过网站体现企业形象，并严格采用W3C国际标准进行网站设计，采用DIV+CSS构 架，不但使您的网站具备足够的扩展性，您网站的速度、兼容性、友好性也都会显著提高，更主要的是，代码和表现分离的方式让您的网站改版变得更容易，而针对 SEO搜索引擎优化的工作也变得更加的畅通。</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="padding: 0px; margin: 0px; font-size: 14px;">网站建设售后服务&nbsp;<span style="padding: 0px; margin: 0px; color: rgb(255, 0, 0);">SALES</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">网站建设专家致力于为客户提供优质的产品及服务。为了多渠道的了解客户的需求，快速响应个性化需要，不断完善售后服务工作，我们客户服务管理部在此为您搭建了这个沟通的平台，我们希望通过网络加强与客户的交流。<br style="padding: 0px; margin: 0px;"/>完善的售后服务是公司信誉的保障和服务趋于完善与成熟的象征，因此，我们在这一方面投入了较大的精力，确保每一位客户的利益得到充分的保障，从而提高企业信誉，发展长期友好的合作。<br style="padding: 0px; margin: 0px;"/>对于享受我公司建站服务的客户，我们提供免费一年售后服务。</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="padding: 0px; margin: 0px; font-size: 14px;">网站全程维护&nbsp;<span style="padding: 0px; margin: 0px; color: rgb(255, 0, 0);">MAINTAIN</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">网页制作好了以后并不是就没事了？其实日后的更新维护才是最重要的！如果参观网站的访问者每次看到的网站都是一样的，那么它们日后还会来吗？这时候，您的网页要由谁来维护呢？<br style="padding: 0px; margin: 0px;"/>严格来说，每一个站点都应该由专业人员定期更新维护。互联网络的最大优势就是信息的实时性，只有快速的反映，准确的报道，才能吸引更多的浏览者。<br style="padding: 0px; margin: 0px;"/>目前很多站点人气很旺，应该和定期更新分不开的。也有很多站点由于种种原因，数月才更新一次，这样就违背了网路最基本的商业目的。网站不是购买一件商品，随着时间的推移而贬值陈旧，只有不断的溶入企业发展动向，推陈出新，才会具有创造力，发挥网路商业潜能。<br style="padding: 0px; margin: 0px;"/>更新维护不仅仅只局限于简单的更换文字稿，应该是将企业的商业动态和发展方向充分考虑进去， 再结合现有的网站规划结构，迅速作出相应的改进。企业的每一个新项目的推广和价格的浮动、内部结构调整， 不应该只是在报纸、电视等媒体做宣传而忽略网路这个最具有潜力的市场。 这也是我们一直强调的商业网站 CIS 策略。<br style="padding: 0px; margin: 0px;"/>鉴于目前大多数网站不具有专业维护的技术力量，网站建设公司可为广大客户提供专业服务。每一个企业可根据自身的商业特征制定不同的维护方案，并保证在最短的时间内迅速完成。</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="padding: 0px; margin: 0px; font-size: 14px;">网页改版&nbsp;<span style="padding: 0px; margin: 0px; color: rgb(255, 0, 0);">REVISED</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">企业上网已成趋势，企业网站犹如雨后春笋般地拔起，试问：<br style="padding: 0px; margin: 0px;"/>您的企业通过互联网进行了巨额的投入，但网站到底给您带来了多大的效益？<br style="padding: 0px; margin: 0px;"/>您的网站从建立到现在，更新过几次、改版过几次？<br style="padding: 0px; margin: 0px;"/>功能不全、设计不美观、布局不合理、几乎从不更新的网站会给企形象带来多大的负面影响？<br style="padding: 0px; margin: 0px;"/>选择网站建站专家，帮您重新审视和构架您的网站系统，我们提供八项全能服务，全面改善您的网站系统，专为您解决企业上网后顾之忧。</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="padding: 0px; margin: 0px; font-size: 14px;">培训解决方案&nbsp;<span style="padding: 0px; margin: 0px; color: rgb(255, 0, 0);">TRAIN</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; color: rgb(68, 68, 68); font-family: Verdana, Arial, Tahoma; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255);">为了更好地做好企业外部门户网站的技术培训工作，将选派具有丰富技术培训和实施经验的技术人员组成培训小组，编写详尽实用的培训教材，并且制定切实有效的培训方案。技术培训的工作为应用软件系统管理和使用培训。<br style="padding: 0px; margin: 0px;"/>在软件产品实践培训中，采用集中培训的方式，由的培训师针对本系统的技术特点，为企业技术人员提供全面培训，培训内容涵盖了本此系统建设过程中使用的主要技术理论和产品实践。<br style="padding: 0px; margin: 0px;"/>在应用软件系统管理和使用培训中，我们会组织项目开发小组的主要人员针对管理和使用人员的不同需求，提供不同层次的培训课程。</p><p><br/></p></div>
+                </div>
+            </div>
+        </div>
+<div class="ms-footer">
+    <footer class="am-footer am-footer-default">
+        <div class="am-footer-switch ms-footer-div">
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://localhost:8080/ms-mcms/html/1/m/53/index.html">关于我们</a>
+            <span class="am-footer-divider ms-footer-div-a">|</span>
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://mingsoft.net/html/1//5527/index.html#faz">发展历程</a>
+            <span class="am-footer-divider ms-footer-div-a">|</span>
+            <a id="godesktop" class="am-footer-desktop ms-footer-div-a" href="http://localhost:8080/ms-mcms/html/1/m/19/index.html">联系我们</a>
+        </div>
+        <div class="am-footer-miscs ms-footer-copyright">
+            <p>版权所有©铭飞科技有限公司2012-2018保留一切权利</p>
+        </div>
+    </footer>
+</div>    </body>
+</html>
