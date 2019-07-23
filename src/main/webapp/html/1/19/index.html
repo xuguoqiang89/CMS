@@ -1,390 +1,360 @@
+﻿<!--* 联系我们- */-->
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
     <head>
-        <title>MCMS-OPEN</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/iconfont/1.0.0/iconfont.css" />
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/base.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/index.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/advice.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/case-list.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/about.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/news-list.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/news-show.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/center.less">
-<script src="http://localhost:8080/ms-mcms/plugins/jquery/1.9.1/jquery-1.9.1.js"></script>
-<script src="http://localhost:8080/ms-mcms/templets/1/default/js/slider.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/less/3.9.0/less.min.js"></script>
-<!--vue-懒加载-表单验证-->
-<script src="http://localhost:8080/ms-mcms/plugins/vue/2.6.9/vue.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/plugins/validator/10.8.0/validator.min.js"></script>
-<!-- Element -->
-<link rel="stylesheet" href="http://localhost:8080/ms-mcms/plugins/element-ui/2.8.2/index.css">
-<script src="http://localhost:8080/ms-mcms/plugins/element-ui/2.8.2/index.js"></script>
-
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/css/animate.css">
-<script src="http://localhost:8080/ms-mcms/static/plugins/axios/0.18.0/axios.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.http.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.util.js"></script>
-<script src="http://localhost:8080/ms-mcms/api/ms.people.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/plupload/plupload.full.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/qs/6.6.0/qs.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.upload.js"></script>
-<script>
-	window.http = ms.http;
-	ms.base = "http://localhost:8080/ms-mcms";
-	ms.login = 'http://localhost:8080/ms-mcms';
-</script>    </head>
-    <body>
-<div class="ms-head">
-    <div class="head-menu">
-        <div class="head-men-left head-menu-flex-center">
-            <a href="http://localhost:8080/ms-mcms/html/1/index.html">
-                <img src="http://cdn.mingsoft.net/images/logo.png" />
-            </a>
-            <ul class="head-menu-list">
-                <li class="head-menu-list-li">走进铭飞
-                    <ul class="head-menu-son-list">
-                        <li>
-                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//53/index.html'>关于我们</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//59/index.html'>公司动态</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>发展历程</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>加入我们</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//19/141/index.html'>联系我们</a>
-                        </li>
-                    </ul>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MCMS-OPEN</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="shortcut icon" href="http://localhost:8080/ms-mcms/templets/1/yiliao/uploads/20170112/587701db24bb3.ico" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/uzfont.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/color.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/global.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/page.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliaocss/layer.css?v=3.0.11110" id="layuicss-skinlayercss">
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/js.cookie.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/md5.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/jquery.superslide.2.1.1.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/layer.js"></script>
+	<link rel="stylesheet" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/style.css" type="text/css" />
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/validform_v5.3.2_min.js"></script>
+	<link rel="stylesheet" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/swiper.css" />
+	<script src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/swiper.min.js"></script>
+	<link rel="stylesheet" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/searchinfowindow_min.css" />
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/ba1eb93f28694a6cb6fb5ec5854737f5.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/searchinfowindow_min.js"></script>
+</head><body>
+<div class="header">
+    <div class="containerno">
+        <div class="logo fl">
+            <div class="logo-img">
+                <a href="http://localhost:8080/ms-mcms">
+                    <img src="http://cdn.mingsoft.net/global/images/MStore.png" />
+                </a>
+            </div>
+        </div>
+        <div class="search fr">
+            <form method="get">
+                <input type="text" class="keywords" name="keywords" value="" placeholder="输入搜索关键词">
+                <input type="hidden" name="module" value="product" />
+                <input type="submit" class="subbth click-search" value="" />
+            </form>
+        </div>
+        <div class="nav fr">
+            <ul>
+                <li data-cid="0" id="0">
+                    <a target="_self" href="http://localhost:8080/ms-mcms">网站首页</a>
                 </li>
-                <li class="head-menu-list-li">
-                    <a href='http://localhost:8080/ms-mcms/html/1//149/index.html'>案例</a>
+                <li data-cid="13" id="13">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//93/index.html">
+                        关于我们
+                    </a>
+                    <div class="childer">
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/94/index.html" class="">主营业务</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/95/index.html" class="">企业文化</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/96/index.html" class="">资质荣誉</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/97/index.html" class="">合作伙伴</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/98/index.html" class="">企业优势</a>
+                    </div>
                 </li>
-                <li class="head-menu-list-li">
-                    <a target="_blank" href='http://mstore.mingsoft.net/mstoreShow.do'>插件&模板</a>
-                    <!-- <ul class="head-menu-son-list">
-                        <li><a href='http://mstore.mingsoft.net/mstoreShow.do'>模板</a></li>
-                        <li><a href='http://mstore.mingsoft.net/mstoreShow.do'>插件</a></li>
-                    </ul> -->
+                <li data-cid="22" id="22">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//106/index.html">
+                        产品列表
+                    </a>
+                    <div class="childer">
+                            <a href="http://localhost:8080/ms-mcms/html/1//106/107/index.html" class="">产品一类</a>
+                            <a href="http://localhost:8080/ms-mcms/html/1//106/108/index.html" class="">产品二类</a>
+                    </div>
                 </li>
-                <li class="head-menu-list-li">
-                    <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//19/142/index.html'>在线留言</a>
+                <li data-cid="17" id="17">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//59/index.html">
+                        新闻中心
+                    </a>
+                    <div class="childer">
+                            <a href="http://localhost:8080/ms-mcms/html/1//59/68/index.html" class="">公司新闻</a>
+                            <a href="http://localhost:8080/ms-mcms/html/1//59/69/index.html" class="">行业新闻</a>
+                            <a href="http://localhost:8080/ms-mcms/html/1//59/70/index.html" class="">最新动态</a>
+                    </div>
                 </li>
-                <li class="head-menu-list-li">技术支持
-                    <ul class="head-menu-son-list">
-                        <li>
-                            <a target="_blank" href='http://bbs.mingsoft.net/mbbs/main.do'>开源社区</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='https://gitee.com/mingSoft/MCMS'>源码下载</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://doc.ms.mingsoft.net/plugs-cms/'>使用手册</a>
-                        </li>
-                    </ul>
+                <li data-cid="34" id="34">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//19/index.html" >
+                        联系我们
+                    </a>
                 </li>
             </ul>
         </div>
-        <div class="head-men-right head-menu-flex-center">
-            <div class="head-menu-flex-center head-menu-right-search">
-                <form id="searchDataForm" action="http://localhost:8080/ms-mcms/cms/1/search.do" method="post">
-                    <input type="text" class='ms-search-input' name="basic_title" placeholder="请输入关键字">
-                    <!-- <i class="iconfont ms-search-click">&#xe85e;</i> -->
-                    <input type="submit" value="" class="ms-search-click">
-                </form>
-            </div>
-            <div class="head-menu-right-content" id="ms-login-vue">
-                <span v-show="!isLogin" style="display: none;">
-                    <span>
-                        <a href='http://localhost:8080/ms-mcms/mcms/login.do'>登录</a>
-                    </span>|<span><a href='http://localhost:8080/ms-mcms/mcms/register.do'>注册</a></span>
-                </span>
-                <div class="topbar-info J_userInfo loginSuccess hide-default" v-show="isLogin" style="display: none;">
-                    <a class="user-name" href="http://localhost:8080/ms-mcms/people/center.do">
-                        <img :src="'http://localhost:8080/ms-mcms/'+peopleInfo.puIcon" class="loginImg user_icon" onerror="this.src='http://cdn.mingsoft.net/global/images/msheader.png'">
-                        <b class="userName ms-userName" v-text="peopleInfo.puNickname"></b>
-                    </a>
-                    <a href="javascript:;" class="quitLogin" @click="quitLogin">退出</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-<script>
-    var headVue = new Vue({
-        el: "#ms-login-vue",
-        data: {
-            isLogin: "", //登录状态
-            peopleInfo: "", //个人信息
-            imgUrl:"",
-        },
-        
-        mounted: function() {
-            //获取个人信息
-            var target = this;
-            $.ajax({
-                type: "POST",
-                url: "http://localhost:8080/ms-mcms/checkLoginStatus.do",
-                success: function(msg) {
-                    target.isLogin = msg.result;  //判断用户是否登录，如登录，则target.isLogin===true
-                    if(msg.result) {
-                        $.ajax({
-                            type: "GET",
-                            url: "http://localhost:8080/ms-mcms/people/user/info.do",
-                            success: function(msg) {
-                                target.peopleInfo = msg;  //target.peopleInfo为当前登录用户的基本信息
-                            }
-                        })
-                    }
-                }
-            })
-        },
-        methods: {
-            //退出登录
-            quitLogin: function() {
-                var target = this;
-                $.ajax({
-                    type: "GET",
-                    url: "http://localhost:8080/ms-mcms/people/quit.do",
-                    success: function(msg) {
-                        if(msg.result) {
-                            $("body").append("<form id='msHeadForm' action=''></form>");
-                            $("#msHeadForm").attr("action", "http://localhost:8080/ms-mcms").submit();
-                        }
-                    }
-                })
-            },
-        },
-    })
-    
-    /* $(function(){
-        var r=location.href;
-          if(r.match("53")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(0).addClass("head-active");
-        }else if(r.match("141")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(0).addClass("head-active");
-        }else if(r.match("59")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(0).addClass("head-active");
-        }else if(r.match("155")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(1).addClass("head-active");
-        }else if(r.match("142")){
-            $(".head-menu-list-li").removeClass("head-active");
-            $(".head-menu-list-li").eq(3).addClass("head-active");
-          }
-      }) */
-</script>        <div class="ms-banner" style="background:url(http://localhost:8080/ms-mcms/templets/1/default/images/contact_us.jpeg) no-repeat center;">
-            <p class="banner_tit_other animated fadeInLeft" >联系我们</p>
-            <p class="banner_tit_other_des animated fadeInRight">Contact us</p>
-        </div>
-        <div class="ms-content-about">
-            <div class="ms-content-main">
-<div class="ms-content-left">
-    <div class="ms-content-left-title">走进铭飞</div>
-    <ul class="ms-content-left-ul">
-       	<a target="_blank" href='http://localhost:8080/ms-mcms/html/1//53/index.html'>
-       		<li>关于我们<span class="ms-content-left-li-more">></span></li>
-       	</a>
-        <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//59/index.html'>
-        	<li>公司动态<span class="ms-content-left-li-more">></span></li>
-        </a>
-        <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>
-        	<li>发展历程<span class="ms-content-left-li-more">></span></li>
-        </a>
-        <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>
-        	<li>加入我们<span class="ms-content-left-li-more">></span></li>
-        </a>
-        <a target="_blank" href=http://localhost:8080/ms-mcms/html/1//19/141/index.html>
-        	<li>联系我们<span class="ms-content-left-li-more">></span></li>
-        </a>
-    </ul>
-</div>
-<script>
-$(function(){
-    var r=location.href;
-      if(r.match("53")){
-      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
-      $(".ms-content-left-ul a").eq(0).addClass("ms-content-left-li-first");
-    }else if(r.match("19")){
-      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
-      $(".ms-content-left-ul a").eq(4).addClass("ms-content-left-li-first");
-    }else if(r.match("59")){
-      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
-      $(".ms-content-left-ul a").eq(1).addClass("ms-content-left-li-first");
-    }
-  })
-</script>                <div class="ms-content-right">
-                    <div class="ms-content-right-position">
-                        <a href="http://localhost:8080/ms-mcms">首页</a>
-                        <span>></span>
-                        <a href="index.html">联系我们</a>
+	    <!-- 内页banner -->
+    <div class="nbanner">
+        <a style="height:240px;background-image:url(http://localhost:8080/ms-mcms/templets/1/yiliao/images/58de1fa2d66f1.jpg);"></a>
+    </div>
+    <div class="hg20-color"></div>
+    <!-- /内页banner -->
+    <div class="back-color">
+        <div class="container">
+            <div class="con-left fl">
+                <div class="subcat">
+                    <div class="sub-tit">
+                        <h3>
+                                联系我们
+                        </h3>
+                        <span class="ar"></span>
                     </div>
-                    <div class="ms-content-right-main">
-                        <div class="ms-content-right-main-title">联系我们</div>
-                        <div class="ms-content-right-main-content"><!-- <p>&nbsp; 公司于2012年3月8日，已正式向《景德镇市工商行政管理局》领取营业 &nbsp; 执照。</p><p>&nbsp; 公司名称：景德镇铭飞科技有限公司</p><p>&nbsp; 经营范围：计算机系统服务及技术开发、咨询服务</p><p><br/></p> -->
-							<style type="text/css">
-								.BMap_Marker img{
-								    width: 100%;
-								    height: 100%;
-								}
-							    html,body{margin:0;padding:0;}
-							    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-							    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-							</style>
-							<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-							<body>
-							  <!--百度地图容器-->
-							  <div style="width:100%;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
-							</body>
-							<script type="text/javascript">
-							    //创建和初始化地图函数：
-							    function initMap(){
-							        createMap();//创建地图
-							        setMapEvent();//设置地图事件
-							        addMapControl();//向地图添加控件
-							        addMarker();//向地图中添加marker
-							    }
-							    
-							    //创建地图函数：
-							    function createMap(){
-							        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-							        var point = new BMap.Point(116.737158,29.153633);//定义一个中心点坐标
-							        map.centerAndZoom(point,9);//设定地图的中心点和坐标并将地图显示在地图容器中
-							        window.map = map;//将map变量存储在全局
-							    }
-							    
-							    //地图事件设置函数：
-							    function setMapEvent(){
-							        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
-							        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-							        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
-							        map.enableKeyboard();//启用键盘上下左右键移动地图
-							    }
-							    
-							    //地图控件添加函数：
-							    function addMapControl(){
-							        //向地图中添加缩放控件
-							  var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-							  map.addControl(ctrl_nav);
-							        //向地图中添加缩略图控件
-							  var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-							  map.addControl(ctrl_ove);
-							        //向地图中添加比例尺控件
-							  var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-							  map.addControl(ctrl_sca);
-							    }
-							    
-							    //标注点数组
-							    var markerArr = [{title:"铭飞科技(景德镇)有限公司",content:"江西省景德镇市昌江区&nbsp;枫林佳苑&nbsp;15栋A区&nbsp;三单元&nbsp;302室",point:"117.187869|29.282949",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
-							     ,{title:"铭飞科技(南昌)办事处",content:"江西省南昌市青山湖区创新一路&nbsp;绿地新都会(西门)&nbsp;12栋2单元901室",point:"116.003117|28.683521",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
-							     ];
-							    //创建marker
-							    function addMarker(){
-							        for(var i=0;i<markerArr.length;i++){
-							            var json = markerArr[i];
-							            var p0 = json.point.split("|")[0];
-							            var p1 = json.point.split("|")[1];
-							            var point = new BMap.Point(p0,p1);
-							      var iconImg = createIcon(json.icon);
-							            var marker = new BMap.Marker(point,{icon:iconImg});
-							      var iw = createInfoWindow(i);
-							      var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
-							      marker.setLabel(label);
-							            map.addOverlay(marker);
-							            label.setStyle({
-							                        borderColor:"#808080",
-							                        color:"#333",
-							                        cursor:"pointer"
-							            });
-							      
-							      (function(){
-							        var index = i;
-							        var _iw = createInfoWindow(i);
-							        var _marker = marker;
-							        _marker.addEventListener("click",function(){
-							            this.openInfoWindow(_iw);
-							          });
-							          _iw.addEventListener("open",function(){
-							            _marker.getLabel().hide();
-							          })
-							          _iw.addEventListener("close",function(){
-							            _marker.getLabel().show();
-							          })
-							        label.addEventListener("click",function(){
-							            _marker.openInfoWindow(_iw);
-							          })
-							        if(!!json.isOpen){
-							          label.hide();
-							          _marker.openInfoWindow(_iw);
-							        }
-							      })()
-							        }
-							    }
-							    //创建InfoWindow
-							    function createInfoWindow(i){
-							        var json = markerArr[i];
-							        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
-							        return iw;
-							    }
-							    //创建一个Icon
-							    function createIcon(json){
-							        var icon = new BMap.Icon("http://localhost:8080/ms-mcms/templets/1/default/images/img-2.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
-							        return icon;
-							    }
-							    
-							    initMap();//创建和初始化地图
-							</script>                        
+                    <ul>
+                        <li class="cursor" data-i="1" data-anchor="contact-40">
+                            <i></i>
+                            <a href="javascript:;">联系方式</a>
+                        </li>
+                        <li class="cursor" data-anchor="contact-41">
+                            <i></i>
+                            <a href="javascript:;">地理位置</a>
+                        </li>
+                        <li class="cursor" data-anchor="contact-42">
+                            <i></i>
+                            <a href="javascript:;">在线留言</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subtac">
+                    <p>咨询热线：</p>
+                    <strong class="ar">888-8888888</strong>
+                </div>
+            </div>
+            <div class="con-right fr">
+                <div class="current">
+                    <div class="curr-left fl">
+                        <h3>
+                                联系我们
+                        </h3>
+                    </div>
+                    <div class="curr-right fr">
+                        <p>您当前的位置：
+                            <a class="home" href="http://localhost:8080/ms-mcms">首页</a>
+                            <a href="http://localhost:8080/ms-mcms/html/1//19/index.html">
+                                    联系我们
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="page-about">
+                    <div class="detail after">
+                        <div class="contactus-order">
+                            <a class="contact-40"></a>
+                            <div class="contact-us after">
+                                <div class="us-left fl">
+                                    <img width="444" src="http://localhost:8080/ms-mcms/templets/1/yiliao/images/58de14d9c1918.jpg" alt="联系方式" />
+                                </div>
+                                <div class="us-right fr">
+                                    <h5>联系方式</h5>
+                                    <p class="desc">MS成功的秘诀之一就是“艰苦创业、无私奉献、努力拼搏、开拓进取”的企业精神，
+                                        是全体IM人的思想成果和精神力量，在企业发展过程中得到不断完善和升华，永远都不会过时。
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span>联系电话</span>
+                                            <p>888-8888888</p>
+                                        </li>
+                                        <li>
+                                            <span>联系邮箱</span>
+                                            <p>888888@163.com</p>
+                                        </li>
+                                        <li>
+                                            <span>公司地址</span>
+                                            <p>来自火星的程序猿</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contactus-order">
+                            <a class="contact-41"></a>
+                            <h5 class="head-tit">地理位置</h5>
+                            <div class="sector_content n-back-1">
+                                <div class="Map wow slideInUp">
+                                    <div id="allmap" style="overflow:hidden;zoom:1;position:relative;">
+                                        <div id="map" style="height:100%;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contactus-order">
+                            <a class="contact-42"></a>
+                            <h5 class="head-tit">在线咨询</h5>
+                            <div class="feedback">
+                                <form method="post" id="Usezanform">
+                                    <div class="feedback-list">
+                                        <ul>
+                                            <li>
+                                                <label>你的名字</label>
+                                                <input type="text" name="username" placeholder="请输入名字" datatype="*2-15"
+                                                    nullmsg="名字不能为空" errormsg="名字格式为2-15个字符" />
+                                            </li>
+                                            <li>
+                                                <label>常用电话</label>
+                                                <input type="text" name="tel" placeholder="请输入电话" datatype="*5-15"
+                                                    nullmsg="电话不能为空" errormsg="电话格式为3-15个字符" />
+                                            </li>
+                                            <li>
+                                                <label>常用QQ</label>
+                                                <input type="text" name="qq" placeholder="请输入QQ" ignore="ignore"
+                                                    datatype="*4-15" nullmsg="QQ不能为空" errormsg="QQ格式为4-15个数字" />
+                                            </li>
+                                            <li class="textarea">
+                                                <textarea name="content" placeholder="请输入留言内容" datatype="*5-255"
+                                                    nullmsg="内容不能为空" errormsg="内容格式为5-255个字符">
+
+                                                </textarea>
+                                            </li>
+                                            <li class="submit">
+                                                <span class="error-hide"></span>
+                                                <input type="hidden" name="title" value="在线留言" />
+                                                <input type="submit" class="input-submit" value="提交留言" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-<div class="ms-footer">
-    <div class="ms-footer-content">
-        <div class="ms-footer-left">
-            <div class="ms-footer-left-column">
-                <span class="ms-footer-left-column-about">
-                	<a href='http://localhost:8080/ms-mcms/html/1//53/index.html'>关于我们</a>
-                </span>|
-                <span class="ms-footer-left-column-course">
-                	<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>发展历程</a>
-                </span>|
-                <span class="ms-footer-left-column-contact">
-                	<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>联系我们</a>
-                </span>
-            </div>
-            <span class="ms-footer-left-copyright">版权所有&copy;铭飞科技有限公司2012-2018保留一切权利</span>
-        </div>
-        <div class="ms-footer-right">
-            <img class='ms-footer-right-img-weixin' src="http://localhost:8080/ms-mcms/templets/1/default/images/we-chat.png">
-            <a target="_blank" href='http://tieba.baidu.com/f?kw=%E9%93%AD%E9%A3%9E%E7%A7%91%E6%8A%80&fr=index&fp=0&ie=utf-8'><img class="ms-footer-right-baidu" src="http://localhost:8080/ms-mcms/templets/1/default/images/baidu.png"></a>
-            <a target="_blank" href='http://weibo.com/killfen'><img src="http://localhost:8080/ms-mcms/templets/1/default/images/micro-blog.png"></a>
-        	<div class="ms-footer-right-weixin">
-        		<p></p>
-        		<img alt="" src="http://localhost:8080/ms-mcms/templets/1/default/images/weixin.jpg">
-        	</div>
+        <div class="hg15"></div>
+    </div>
+    <!-- 页脚 -->
+<div class="footer mt30">
+    <div class="container">
+        <div class="footer-nav">
+            <ul>
+                <li>
+                    <h3>
+                        关于我们
+                        <i></i>
+                    </h3>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/94/index.html">主营业务</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/95/index.html">企业文化</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/96/index.html">资质荣誉</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/97/index.html">合作伙伴</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/98/index.html">企业优势</a>
+                </li>
+                <li>
+                    <h3>
+                        产品列表
+                        <i></i>
+                    </h3>
+                        <a href="http://localhost:8080/ms-mcms/html/1//106/107/index.html">产品一类</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//106/108/index.html">产品二类</a>
+                </li>
+                <li>
+                    <h3>
+                        新闻中心
+                        <i></i>
+                    </h3>
+                        <a class="childer-a" href="http://localhost:8080/ms-mcms/html/1//59/68/index.html">公司新闻</a>
+                        <a class="childer-a" href="http://localhost:8080/ms-mcms/html/1//59/69/index.html">行业新闻</a>
+                        <a class="childer-a" href="http://localhost:8080/ms-mcms/html/1//59/70/index.html">最新动态</a>
+                </li>
+                <li>
+                    <h3>
+                        联系我们
+                        <i></i>
+                    </h3>
+                    <a href="http://localhost:8080/ms-mcms/html/1//19/141/index.html">联系我们</a>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
-<script>
-/*导航下拉*/
-$(function(){
-    $(".head-menu-list-li").hover(function(){
-        $(this).find(".head-menu-son-list").fadeToggle();
-    });
-    $('.ms-footer-right-img-weixin').hover(function(){
-    	$('.ms-footer-right-weixin').toggle();
-    });
-});
-
-</script>    </body>
+    <div class="copyright">
+        <div class="container">
+            <span>Copyright &copy;@2016来自火星人的程序猿&nbsp;&nbsp;TEL:888-8888888&nbsp;&nbsp;</span>
+        </div>
+    </div>
+</div>    <!-- /页脚 -->
+    <script type="text/javascript">
+        $(function () {
+            $(".subcat ul li").on("click", function () {
+                var offsettop;
+                var anchor = $(this).attr("data-anchor"),
+                    datai = $(this).attr("data-i");
+                (datai == 1) ? offsettop = $("." + anchor).offset().top - 90 : offsettop = $("." + anchor).offset().top;
+                $("body,html").animate({
+                    scrollTop: offsettop
+                }, 700);
+            });
+        })
+        $(document).ready(function () {
+            var mappoi = 20,
+                mapwidth = 290,
+                mapheight = 105,
+                site_name = "";
+            var map = new BMap.Map('map');
+            var poi = new BMap.Point(116.0015908368, 28.6840659036);
+            map.centerAndZoom(poi, mappoi);
+            map.enableScrollWheelZoom();
+            var content = '<div style="margin:0;line-height:20px;padding:2px;">'
+                + '<img src="images/579a03030b794.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>'
+                + '地址：江西省南昌市青山湖区创新一路 绿地新都会(西门) 12栋2单元901室<br/>电话：888-8888888<br/>'
+                + '</div>';
+            //创建检索信息窗口对象
+            var searchInfoWindow = null;
+            var _width = mapwidth,
+                _height = mapheight;
+            searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+                title: site_name,      //标题
+                width: _width,             //宽度
+                height: _height,              //高度
+                panel: "panel",         //检索结果面板
+                enableAutoPan: true,     //自动平移
+                searchTypes: [
+                    BMAPLIB_TAB_SEARCH,   //周边检索
+                    BMAPLIB_TAB_TO_HERE,  //到这里去
+                    BMAPLIB_TAB_FROM_HERE //从这里出发
+                ]
+            });
+            var marker = new BMap.Marker(poi); //创建marker对象
+            marker.enableDragging(); //marker可拖拽
+            marker.addEventListener("click", function (e) {
+                searchInfoWindow.open(marker);
+            })
+            map.addOverlay(marker); //在地图中添加marker
+            searchInfoWindow.open(marker); //在marker上打开检索信息串口
+        })
+        $(function () {
+            //留言评论表单
+            $("#Usezanform").Validform({
+                ajaxPost: true,
+                tiptype: function (a, o, b) {
+                    var c = $(".error-hide");
+                    b(c, o.type);
+                    c.html(a);
+                },
+                callback: function (data) {
+                    if (data.status == "y") {
+                        $(".error-hide").html(data.info);
+                        $(".input-submit").attr('disabled', true);
+                        setTimeout(function () {
+                            $(".input-submit").attr('disabled', false);
+                        }, 1500);
+                    } else {
+                        $(".error-hide").html(data.info);
+                    }
+                }
+            });
+        });
+        var CATID = "34",
+            BCID = "34",
+            SUBCATFIXED = 1, //悬浮
+            NAVLEFTC = "#c2c2c2", //导航左侧边线
+            NAVHOVER = "",
+            NAVCHILDER = "",
+            MAP = "/map/index.html", //网站地图
+            ONCONTEXT = 1, //禁止右键
+            ONCOPY = 1, //禁止复制
+            ONSELECT = 1; //禁止选择
+        $("#34").attr("class", "on");
+    </script>
+</body>
 </html>

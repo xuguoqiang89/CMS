@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<#include "head-file.htm">
+<body>
+	<#include "head.htm">
+	<!-- 幻灯片 -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide swiper-lazy" data-background="{ms:global.host/}/{ms:global.style/}/images/1464858626484.jpg" style="width:100%;min-width:1180px;height:400px">
+				<div class="swiper-lazy-preloader"></div>
+			</div>
+			<div class="swiper-slide swiper-lazy" data-background="{ms:global.host/}/{ms:global.style/}/images/1464859625584.jpg" style="width:100%;min-width:1180px;height:400px">
+				<div class="swiper-lazy-preloader"></div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<div class="container plate mt20">
+		<div class="case fl " style='background:#1db0d5;'>
+			<div class="case-left fl">
+				<h3 class="f16">产品列表</h3>
+				<span class="block ar">Product</span>
+				<a class="ar" href="{ms:global.url/}/106/index.html">MORE</a>
+			</div>
+			<div class="case-right fr">
+				<a href="{ms:global.url/}/106/index.html">
+					<img width="280" src="{ms:global.host/}/{ms:global.style/}/images/1460380829450.jpg" />
+				</a>
+			</div>
+		</div>
+		<div class="news fl">
+			<div class="news-left fl " style='background:#ff2e4b;'>
+				<h3 class="f16">新闻中心</h3>
+				<span class="block ar">News</span>
+				<ul class="hd">
+					<a class="prev">
+						<i class="uzicofont uzico-xiao76"></i>
+					</a>
+					<a class="next">
+						<i class="uzicofont uzico-xiao75"></i>
+					</a>
+				</ul>
+			</div>
+			<div class="news-right fr">
+				<ul>
+					{ms:arclist size=6 typeid=59 type=son}
+					<li>
+						<a target="_self" href="{ms:global.url/}[field.link/]">
+							<h5 class="f14 pt5 pb8">[field.title/]</h5>
+							<p>[field.descrip/]</p>
+						</a>
+					</li>
+					{/ms:arclist}
+				</ul>
+			</div>
+		</div>
+		<div class="cate-nav fr">
+			<ul>
+				<li>
+					<a href="{ms:global.url/}/93/96/index.html">
+						<img width="37" class="fl" src="{ms:global.host/}/{ms:global.style/}/images/58db96ab947b8.png" />
+						<h5 class="f14">资质荣誉</h5>
+						<span>Honor</span>
+					</a>
+				</li>
+				<li>
+					<a href="{ms:global.url/}/19/index.html">
+						<img width="37" class="fl" src="{ms:global.host/}/{ms:global.style/}/images/58db98328fa57.png" />
+						<h5 class="f14">联系我们</h5>
+						<span>join us</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 页脚 -->
+	<#include "footer.htm">
+	<!-- /页脚 -->
+	<!-- /幻灯片 -->
+	<script type="text/javascript">
+		$(function () {
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				effect: "slide",
+				lazyLoading: true,
+				lazyLoadingInPrevNext: true,
+				lazyLoadingOnTransitionStart: true,
+				preventClicks: false,
+				autoplay: 500000,
+				autoplayDisableOnInteraction: false,
+				direction: "horizontal",
+				mousewheelControl: false,
+				mousewheelReleaseOnEdges: true,
+				keyboardControl: true,
+			});
+		})
+		var CATID = "",
+			BCID = "0",
+			SUBCATFIXED = 1, //悬浮
+			NAVLEFTC = "#c2c2c2", //导航左侧边线
+			NAVHOVER = "",
+			NAVCHILDER = "",
+			MAP = "/map/index.html", //网站地图
+			ONCONTEXT = 1, //禁止右键
+			ONCOPY = 1, //禁止复制
+			ONSELECT = 1; //禁止选择
+		$(".news").slide({ mainCell: ".news-right ul", autoPage: true, effect: "left", autoPlay: true, vis: 1, trigger: "click", interTime: 7000 });
+	</script>
+</body>
+</html>

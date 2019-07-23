@@ -1,0 +1,61 @@
+<div class="header">
+    <div class="containerno">
+        <div class="logo fl">
+            <div class="logo-img">
+                <a href="{ms:global.host/}">
+                    <img src="http://cdn.mingsoft.net/global/images/MStore.png" />
+                </a>
+            </div>
+        </div>
+        <div class="search fr">
+            <form method="get">
+                <input type="text" class="keywords" name="keywords" value="" placeholder="输入搜索关键词">
+                <input type="hidden" name="module" value="product" />
+                <input type="submit" class="subbth click-search" value="" />
+            </form>
+        </div>
+        <div class="nav fr">
+            <ul>
+                <li data-cid="0" id="0">
+                    <a target="_self" href="{ms:global.host/}">网站首页</a>
+                </li>
+                <li data-cid="13" id="13">
+                    <a target="_self" href="{ms:global.url/}/93/index.html">
+                        {ms:channel type=self typeid=93}[field.typetitle/]{/ms:channel}
+                    </a>
+                    <div class="childer">
+                        {ms:channel type=son typeid=93}
+                        	<a href="{ms:global.url/}[field.typelink/]" class="[field.class/]">[field.typetitle/]</a>
+                        {/ms:channel}
+                    </div>
+                </li>
+                <li data-cid="22" id="22">
+                    <a target="_self" href="{ms:global.url/}/106/index.html">
+                        {ms:channel type=self typeid=106}[field.typetitle/]{/ms:channel}
+                    </a>
+                    <div class="childer">
+                        {ms:channel type=son typeid=106}
+                            <a href="{ms:global.url/}[field.typelink/]" class="[field.class/]">[field.typetitle/]</a>
+                        {/ms:channel}
+                    </div>
+                </li>
+                <li data-cid="17" id="17">
+                    <a target="_self" href="{ms:global.url/}/59/index.html">
+                        {ms:channel type=self typeid=59}[field.typetitle/]{/ms:channel}
+                    </a>
+                    <div class="childer">
+                        {ms:channel type=son typeid=59}
+                            <a href="{ms:global.url/}[field.typelink/]" class="[field.class/]">[field.typetitle/]</a>
+                        {/ms:channel}
+                    </div>
+                </li>
+                <li data-cid="34" id="34">
+                    <a target="_self" href="{ms:global.url/}/19/index.html" >
+                        {ms:channel type=self typeid=19}[field.typetitle/]{/ms:channel}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+	

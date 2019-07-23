@@ -1,0 +1,105 @@
+﻿<!--* 新闻列表- */-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<#include "head-file.htm">
+<body>
+	<#include "head.htm">
+	<!-- 内页banner -->
+	<div class="nbanner">
+		<a style="height:240px;background-image:url({ms:global.host/}/{ms:global.style/}/images/58de1f6e6cc2e.jpg);"></a>
+	</div>
+	<div class="hg20-color"></div>
+	<!-- /内页banner -->
+	<div class="back-color">
+		<div class="container">
+			<div class="con-left fl">
+				<div class="subcat">
+					<div class="sub-tit">
+						<h3>
+							{ms:channel type=self typeid=59}
+								[field.typetitle/]
+							{/ms:channel}
+						</h3>
+						<span class="ar">News Center</span>
+					</div>
+					<ul>
+						{ms:channel type=son typeid=59 class=detailMainLeftMenu_cur}
+							<li>
+								<i></i>
+								<a href="{ms:global.url/}[field.typelink/]" class="[field.class/]">[field.typetitle/]</a>
+							</li>
+						{/ms:channel}
+					</ul>
+				</div>
+				<div class="subtac">
+					<p>咨询热线：</p>
+					<strong class="ar">888-888888</strong>
+				</div>
+			</div>
+			<div class="con-right fr">
+				<div class="current">
+					<div class="curr-left fl">
+						<h3>{ms:field.typetitle/}</h3>
+					</div>
+					<div class="curr-right fr">
+						<p>您当前的位置：
+							<a class="home" href="{ms:global.host/}">首页</a>
+							<a href="{ms:global.url/}/59/index.html">{ms:field.typetitle/}</a>
+						</p>
+					</div>
+				</div>
+				<div class="news-list">
+					<ul>
+						{ms:arclist typeid=59 ispaging=true size=6}
+							<li>
+								<a target="_self" href="{ms:global.url/}[field.link/]">
+									<img width="180" class="fl" src="{ms:global.host/}[field.litpic/]" alt="[field.title/]" />
+									<h5>[field.title/]</h5>
+									<p class="time-sour">
+										<span>发布时间：[field.date?string("yyyy-MM-dd")/]</span>&nbsp;&nbsp;
+										<span>文字来源：[field.source/]</span>
+									</p>
+									<p class="reamk">[field.descrip/]</p>
+								</a>
+							</li>
+						{/ms:arclist}
+					</ul>
+					<div class="pages">
+						<a href="{ms:global.url/}/{ms:page.index/}">首页</a>
+						<a href="{ms:global.url/}/{ms:page.pre/}">上一页</a>
+						<a href="{ms:global.url/}/{ms:page.next/}">下一页</a>
+						<a href="{ms:global.url/}/{ms:page.last/}">末页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hg15"></div>
+	</div>
+	<!-- 页脚 -->
+	<#include "footer.htm">
+	<!-- /页脚 -->
+	<!-- /子菜单 -->
+	<script type="text/javascript">
+		$('.subcat ul li').removeAttr('class')
+		var address = window.location.href
+		if (address.match('/59/68/')) {
+			$('.subcat ul li:eq(0)').attr('class', 'on')
+		} else if (address.match('/59/69/')) {
+			$('.subcat ul li:eq(1)').attr('class', 'on')
+		} else if (address.match('/59/70/')) {
+			$('.subcat ul li:eq(2)').attr('class', 'on')
+		}
+		var CATID = "17",
+			BCID = "17",
+			SUBCATFIXED = 1, //悬浮
+			NAVLEFTC = "#c2c2c2", //导航左侧边线
+			NAVHOVER = "",
+			NAVCHILDER = "",
+			MAP = "/map/index.html", //网站地图
+			ONCONTEXT = 1, //禁止右键
+			ONCOPY = 1, //禁止复制
+			ONSELECT = 1; //禁止选择
+		$("#17").attr("class", "on");
+	</script>
+</body>
+</html>

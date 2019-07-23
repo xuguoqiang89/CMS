@@ -1,512 +1,271 @@
+﻿<!--* 新闻详情- */-->
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>MCMS-OPEN</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/plugins/iconfont/1.0.0/iconfont.css" />
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/base.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/index.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/advice.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/case-list.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/about.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/news-list.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/news-show.less">
-<link rel="stylesheet/less" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/less/center.less">
-<script src="http://localhost:8080/ms-mcms/plugins/jquery/1.9.1/jquery-1.9.1.js"></script>
-<script src="http://localhost:8080/ms-mcms/templets/1/default/js/slider.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/less/3.9.0/less.min.js"></script>
-<!--vue-懒加载-表单验证-->
-<script src="http://localhost:8080/ms-mcms/plugins/vue/2.6.9/vue.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/plugins/validator/10.8.0/validator.min.js"></script>
-<!-- Element -->
-<link rel="stylesheet" href="http://localhost:8080/ms-mcms/plugins/element-ui/2.8.2/index.css">
-<script src="http://localhost:8080/ms-mcms/plugins/element-ui/2.8.2/index.js"></script>
-
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/css/animate.css">
-<script src="http://localhost:8080/ms-mcms/static/plugins/axios/0.18.0/axios.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.http.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.util.js"></script>
-<script src="http://localhost:8080/ms-mcms/api/ms.people.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/plupload/plupload.full.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/qs/6.6.0/qs.min.js"></script>
-<script src="http://localhost:8080/ms-mcms/static/plugins/ms/1.0.0/ms.upload.js"></script>
-<script>
-	window.http = ms.http;
-	ms.base = "http://localhost:8080/ms-mcms";
-	ms.login = 'http://localhost:8080/ms-mcms';
-</script>        <link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/default/css/jquery.sinaemotion.css" />
-        <script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/default/js/jquery.sinaEmotion.js"></script>
-    </head>
-
-    <body>
-<div class="ms-head">
-    <div class="head-menu">
-        <div class="head-men-left head-menu-flex-center">
-            <a href="http://localhost:8080/ms-mcms/html/1/index.html">
-                <img src="http://cdn.mingsoft.net/images/logo.png" />
-            </a>
-            <ul class="head-menu-list">
-                <li class="head-menu-list-li">走进铭飞
-                    <ul class="head-menu-son-list">
-                        <li>
-                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//53/index.html'>关于我们</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//59/index.html'>公司动态</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>发展历程</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>加入我们</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//19/141/index.html'>联系我们</a>
-                        </li>
-                    </ul>
+<html lang="zh-cn">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MCMS-OPEN</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="shortcut icon" href="http://localhost:8080/ms-mcms/templets/1/yiliao/uploads/20170112/587701db24bb3.ico" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/uzfont.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/color.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/global.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/page.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/ms-mcms/templets/1/yiliaocss/layer.css?v=3.0.11110" id="layuicss-skinlayercss">
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/js.cookie.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/md5.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/jquery.superslide.2.1.1.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/layer.js"></script>
+	<link rel="stylesheet" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/style.css" type="text/css" />
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/validform_v5.3.2_min.js"></script>
+	<link rel="stylesheet" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/swiper.css" />
+	<script src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/swiper.min.js"></script>
+	<link rel="stylesheet" href="http://localhost:8080/ms-mcms/templets/1/yiliao/css/searchinfowindow_min.css" />
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/ba1eb93f28694a6cb6fb5ec5854737f5.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/ms-mcms/templets/1/yiliao/js/searchinfowindow_min.js"></script>
+</head><body>
+<div class="header">
+    <div class="containerno">
+        <div class="logo fl">
+            <div class="logo-img">
+                <a href="http://localhost:8080/ms-mcms">
+                    <img src="http://cdn.mingsoft.net/global/images/MStore.png" />
+                </a>
+            </div>
+        </div>
+        <div class="search fr">
+            <form method="get">
+                <input type="text" class="keywords" name="keywords" value="" placeholder="输入搜索关键词">
+                <input type="hidden" name="module" value="product" />
+                <input type="submit" class="subbth click-search" value="" />
+            </form>
+        </div>
+        <div class="nav fr">
+            <ul>
+                <li data-cid="0" id="0">
+                    <a target="_self" href="http://localhost:8080/ms-mcms">网站首页</a>
                 </li>
-                <li class="head-menu-list-li">
-                    <a href='http://localhost:8080/ms-mcms/html/1//149/index.html'>案例</a>
+                <li data-cid="13" id="13">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//93/index.html">
+                        关于我们
+                    </a>
+                    <div class="childer">
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/94/index.html" class="">主营业务</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/95/index.html" class="">企业文化</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/96/index.html" class="">资质荣誉</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/97/index.html" class="">合作伙伴</a>
+                        	<a href="http://localhost:8080/ms-mcms/html/1//93/98/index.html" class="">企业优势</a>
+                    </div>
                 </li>
-                <li class="head-menu-list-li">
-                    <a target="_blank" href='http://mstore.mingsoft.net/mstoreShow.do'>插件&模板</a>
-                    <!-- <ul class="head-menu-son-list">
-                        <li><a href='http://mstore.mingsoft.net/mstoreShow.do'>模板</a></li>
-                        <li><a href='http://mstore.mingsoft.net/mstoreShow.do'>插件</a></li>
-                    </ul> -->
+                <li data-cid="22" id="22">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//106/index.html">
+                        产品列表
+                    </a>
+                    <div class="childer">
+                            <a href="http://localhost:8080/ms-mcms/html/1//106/107/index.html" class="">产品一类</a>
+                            <a href="http://localhost:8080/ms-mcms/html/1//106/108/index.html" class="">产品二类</a>
+                    </div>
                 </li>
-                <li class="head-menu-list-li">
-                    <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//19/142/index.html'>在线留言</a>
+                <li data-cid="17" id="17">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//59/index.html">
+                        新闻中心
+                    </a>
+                    <div class="childer">
+                            <a href="http://localhost:8080/ms-mcms/html/1//59/68/index.html" class="">公司新闻</a>
+                            <a href="http://localhost:8080/ms-mcms/html/1//59/69/index.html" class="">行业新闻</a>
+                            <a href="http://localhost:8080/ms-mcms/html/1//59/70/index.html" class="">最新动态</a>
+                    </div>
                 </li>
-                <li class="head-menu-list-li">技术支持
-                    <ul class="head-menu-son-list">
-                        <li>
-                            <a target="_blank" href='http://bbs.mingsoft.net/mbbs/main.do'>开源社区</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='https://gitee.com/mingSoft/MCMS'>源码下载</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href='http://doc.ms.mingsoft.net/plugs-cms/'>使用手册</a>
-                        </li>
-                    </ul>
+                <li data-cid="34" id="34">
+                    <a target="_self" href="http://localhost:8080/ms-mcms/html/1//19/index.html" >
+                        联系我们
+                    </a>
                 </li>
             </ul>
         </div>
-        <div class="head-men-right head-menu-flex-center">
-            <div class="head-menu-flex-center head-menu-right-search">
-                <form id="searchDataForm" action="http://localhost:8080/ms-mcms/cms/1/search.do" method="post">
-                    <input type="text" class='ms-search-input' name="basic_title" placeholder="请输入关键字">
-                    <!-- <i class="iconfont ms-search-click">&#xe85e;</i> -->
-                    <input type="submit" value="" class="ms-search-click">
-                </form>
-            </div>
-            <div class="head-menu-right-content" id="ms-login-vue">
-                <span v-show="!isLogin" style="display: none;">
-                    <span>
-                        <a href='http://localhost:8080/ms-mcms/mcms/login.do'>登录</a>
-                    </span>|<span><a href='http://localhost:8080/ms-mcms/mcms/register.do'>注册</a></span>
-                </span>
-                <div class="topbar-info J_userInfo loginSuccess hide-default" v-show="isLogin" style="display: none;">
-                    <a class="user-name" href="http://localhost:8080/ms-mcms/people/center.do">
-                        <img :src="'http://localhost:8080/ms-mcms/'+peopleInfo.puIcon" class="loginImg user_icon" onerror="this.src='http://cdn.mingsoft.net/global/images/msheader.png'">
-                        <b class="userName ms-userName" v-text="peopleInfo.puNickname"></b>
-                    </a>
-                    <a href="javascript:;" class="quitLogin" @click="quitLogin">退出</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-<script>
-    var headVue = new Vue({
-        el: "#ms-login-vue",
-        data: {
-            isLogin: "", //登录状态
-            peopleInfo: "", //个人信息
-            imgUrl:"",
+	  <!-- 内页banner -->
+  <div class="nbanner">
+    <a style="height:240px;background-image:url(http://localhost:8080/ms-mcms/templets/1/yiliao/images/58de1f6e6cc2e.jpg);"></a>
+  </div>
+  <div class="hg20-color"></div>
+  <!-- /内页banner -->
+  <div class="back-color">
+    <div class="container">
+      <div class="con-left fl">
+        <div class="subcat">
+          <div class="sub-tit">
+            <h3>
+              新闻中心
+            </h3>
+            <span class="ar">News Center</span>
+          </div>
+          <ul>
+            <li>
+              <i></i>
+              <a href="http://localhost:8080/ms-mcms/html/1//59/68/index.html" class="">公司新闻</a>
+            </li>
+            <li>
+              <i></i>
+              <a href="http://localhost:8080/ms-mcms/html/1//59/69/index.html" class="">行业新闻</a>
+            </li>
+            <li>
+              <i></i>
+              <a href="http://localhost:8080/ms-mcms/html/1//59/70/index.html" class="">最新动态</a>
+            </li>
+          </ul>
+        </div>
+        <div class="subtac">
+          <p>咨询热线：</p>
+          <strong class="ar">888-8888888</strong>
+        </div>
+      </div>
+      <div class="con-right fr">
+        <div class="current">
+          <div class="curr-left fl">
+            <h3>研发成果</h3>
+          </div>
+          <div class="curr-right fr">
+            <p>
+              您当前的位置：
+              <a class="home" href="http://localhost:8080/ms-mcms">首页</a>
+              <a href="http://localhost:8080/ms-mcms/html/1//59/index.html">研发成果</a>
+            </p>
+          </div>
+        </div>
+        <div class="news-content">
+          <div class="content-title">
+            <h1>“绿色装饰”融入杭州市民中心装饰工程 </h1>
+            <div class="sub-title">
+              <span class="time">日期：2028-01-01</span>
+              <span class="type">类型：
+                <a href="http://localhost:8080/ms-mcmshttp://localhost:8080/ms-mcms/html/1/index.html">研发成果</a>
+              </span>
+              <span class="share">分享：
+                <div class="bdsharebuttonbox">
+                  <a href="#" class="bds_more" data-cmd=""></a>
+                  <a href="#" class="bds_weixin" data-cmd="" title="分享到微信"></a>
+                  <a href="#" class="bds_tsina" data-cmd="" title="分享到新浪微博"></a>
+                  <a href="#" class="bds_qzone" data-cmd="" title="分享到QQ空间"></a>
+                  <a href="#" class="bds_tqq" data-cmd="" title="分享到腾讯微博"></a>
+                  <a href="#" class="bds_renren" data-cmd="" title="分享到人人网"></a>
+                </div>
+              </span>
+            </div>
+            <div class="show-keyword pt5">
+              
+            </div>
+          </div>
+          <div class="detail"><p><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">日前，公司成功中标杭州市民中心G楼约18000多平方米四层公共区域装饰工程，这是继杭州钱江新城国际会议中心之后的又一城市标志性建筑工程。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">在该项目施工过程中，公司始终将“绿色装饰”理念融入其中。“绿色装饰”是指在设计、装修选材、施工等整个过程都符合绿色环保的理念，把对环 境造成的危害降低到最小，让市民享受到真正的绿色生活。随着社会的不断发展，“绿色装饰”日趋成为广大建筑装饰企业努力的方向。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">公司项目部在杭州市民中心G楼工程中，严格按照健康、环保、安全的施工标准，精心施工，力争达到“浙江省建筑安全文明标化工地”的要求。在原 材料的选用上精挑细选，大量运用了玻璃、大理石材等绿色环保和高品质的装饰材料，突显出了简约、明快、自然的设计风格，创造出宽阔、绿色、实用的公共空 间。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">此外项目部还非常注重采取新工艺、新方法，不仅提高了工程的整体美观性和实用性，而且加快了施工进度，提升了工作效率。由于本工程是圆型结构的楼层施 工，特别是石材在圆弧和圆柱造型上用量大，大大增加了工程的施工难度。因此，项目部按工程施工位置的不同分别采用了石材干挂施工工艺和石材湿贴与灌浆施工 工艺。通过这两种施工工艺铺出来的石材平整、洁净、色泽一致，无裂痕和缺损，既美观又方便今后日常护理。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">作为杭州市重点工程，杭州市民中心G楼公共区域装饰工程得到了公司领导的高度重视。总经理高利明亲自坐镇指挥，组建了一支强有力的项目领导管 理班子，采用矩阵式组织管理体系，即采取以项目经理为第一责任人，分解项目绿色施工指标，形成完善的绿色施工组织、责任体系，在保证质量、安全等基本要求 的前提下，通过科学管理和技术进步，最大限度地节约资源与减少对环境负面影响，实现四位一体的绿色环保施工，打造“绿色装饰”精品工程。</span></p> </div>
+          <div class="Pre-Next">
+          	<a href="">                        
+              <p class="fl page-prev">
+              <span>上一个：</span>
+                
+              </p>
+            </a>
+            <a class="a" href="">
+	            <p class="fr page-next">
+	              <span>下一个：</span>
+	                
+	            </p>
+             </a>
+            <a class="return" href="http://localhost:8080/ms-mcms/html/1//59/index.html">返回</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hg15"></div>
+  </div>
+  <!-- 页脚 -->
+<div class="footer mt30">
+    <div class="container">
+        <div class="footer-nav">
+            <ul>
+                <li>
+                    <h3>
+                        关于我们
+                        <i></i>
+                    </h3>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/94/index.html">主营业务</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/95/index.html">企业文化</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/96/index.html">资质荣誉</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/97/index.html">合作伙伴</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//93/98/index.html">企业优势</a>
+                </li>
+                <li>
+                    <h3>
+                        产品列表
+                        <i></i>
+                    </h3>
+                        <a href="http://localhost:8080/ms-mcms/html/1//106/107/index.html">产品一类</a>
+                        <a href="http://localhost:8080/ms-mcms/html/1//106/108/index.html">产品二类</a>
+                </li>
+                <li>
+                    <h3>
+                        新闻中心
+                        <i></i>
+                    </h3>
+                        <a class="childer-a" href="http://localhost:8080/ms-mcms/html/1//59/68/index.html">公司新闻</a>
+                        <a class="childer-a" href="http://localhost:8080/ms-mcms/html/1//59/69/index.html">行业新闻</a>
+                        <a class="childer-a" href="http://localhost:8080/ms-mcms/html/1//59/70/index.html">最新动态</a>
+                </li>
+                <li>
+                    <h3>
+                        联系我们
+                        <i></i>
+                    </h3>
+                    <a href="http://localhost:8080/ms-mcms/html/1//19/141/index.html">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <span>Copyright &copy;@2016来自火星人的程序猿&nbsp;&nbsp;TEL:888-8888888&nbsp;&nbsp;</span>
+        </div>
+    </div>
+</div>  <!-- /页脚 -->
+  <script type="text/javascript">
+    $(function () {
+      window._bd_share_config = {
+        "common": {
+          "bdSnsKey": {}, "bdText": "", "bdMini": "2",
+          "bdMiniList": false, "bdPic": "",
+          "bdStyle": "0", "bdSize": "16"
         },
-        
-        mounted: function() {
-            //获取个人信息
-            var target = this;
-            $.ajax({
-                type: "POST",
-                url: "http://localhost:8080/ms-mcms/checkLoginStatus.do",
-                success: function(msg) {
-                    target.isLogin = msg.result;  //判断用户是否登录，如登录，则target.isLogin===true
-                    if(msg.result) {
-                        $.ajax({
-                            type: "GET",
-                            url: "http://localhost:8080/ms-mcms/people/user/info.do",
-                            success: function(msg) {
-                                target.peopleInfo = msg;  //target.peopleInfo为当前登录用户的基本信息
-                            }
-                        })
-                    }
-                }
-            })
-        },
-        methods: {
-            //退出登录
-            quitLogin: function() {
-                var target = this;
-                $.ajax({
-                    type: "GET",
-                    url: "http://localhost:8080/ms-mcms/people/quit.do",
-                    success: function(msg) {
-                        if(msg.result) {
-                            $("body").append("<form id='msHeadForm' action=''></form>");
-                            $("#msHeadForm").attr("action", "http://localhost:8080/ms-mcms").submit();
-                        }
-                    }
-                })
-            },
-        },
+        "share": {}
+      }; with (document) 0[
+        (getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src
+        = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+        + ~(-new Date() / 36e5)];
     })
-    
-    /* $(function(){
-        var r=location.href;
-          if(r.match("53")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(0).addClass("head-active");
-        }else if(r.match("141")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(0).addClass("head-active");
-        }else if(r.match("59")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(0).addClass("head-active");
-        }else if(r.match("155")){
-          $(".head-menu-list-li").removeClass("head-active");
-          $(".head-menu-list-li").eq(1).addClass("head-active");
-        }else if(r.match("142")){
-            $(".head-menu-list-li").removeClass("head-active");
-            $(".head-menu-list-li").eq(3).addClass("head-active");
-          }
-      }) */
-</script>        <div class="ms-banner" style="background:url(http://localhost:8080/ms-mcms/templets/1/defaultimages/news2.png) no-repeat center;">
-            <p class="banner_tit_other animated fadeInLeft">公司动态</p>
-            
-            <p class="banner_tit_other_des animated fadeInRight">Our company</p>
-        </div>
-        <div class="ms-content-about" id="news-show-vue">
-            <div class="ms-content-main">
-<div class="ms-content-left">
-    <div class="ms-content-left-title">走进铭飞</div>
-    <ul class="ms-content-left-ul">
-       	<a target="_blank" href='http://localhost:8080/ms-mcms/html/1//53/index.html'>
-       		<li>关于我们<span class="ms-content-left-li-more">></span></li>
-       	</a>
-        <a target="_blank" href='http://localhost:8080/ms-mcms/html/1//59/index.html'>
-        	<li>公司动态<span class="ms-content-left-li-more">></span></li>
-        </a>
-        <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>
-        	<li>发展历程<span class="ms-content-left-li-more">></span></li>
-        </a>
-        <a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>
-        	<li>加入我们<span class="ms-content-left-li-more">></span></li>
-        </a>
-        <a target="_blank" href=http://localhost:8080/ms-mcms/html/1//19/141/index.html>
-        	<li>联系我们<span class="ms-content-left-li-more">></span></li>
-        </a>
-    </ul>
-</div>
-<script>
-$(function(){
-    var r=location.href;
-      if(r.match("53")){
-      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
-      $(".ms-content-left-ul a").eq(0).addClass("ms-content-left-li-first");
-    }else if(r.match("19")){
-      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
-      $(".ms-content-left-ul a").eq(4).addClass("ms-content-left-li-first");
-    }else if(r.match("59")){
-      $(".ms-content-left-ul a").removeClass("ms-content-left-li-first");
-      $(".ms-content-left-ul a").eq(1).addClass("ms-content-left-li-first");
+  </script>
+  <!-- /子菜单 -->
+  <script type="text/javascript">
+    $('.subcat ul li').removeAttr('class')
+    var address = window.location.href
+    if (address.match('/59/68/')) {
+      $('.subcat ul li:eq(0)').attr('class', 'on')
+    } else if (address.match('/59/69/')) {
+      $('.subcat ul li:eq(1)').attr('class', 'on')
+    } else if (address.match('/59/70/')) {
+      $('.subcat ul li:eq(2)').attr('class', 'on')
     }
-  })
-</script>                <div class="ms-content-right">
-                    <div class="ms-content-right-position">
-                        <a href="http://localhost:8080/ms-mcms">首页</a>
-                        <span>></span>
-                        <a href="index.html">研发成果</a>
-                    </div>
-                    <div class="ms-content-right-main">
-                        <div class="ms-content-right-main-title" id="ms-content-right-main-title">
-                            <div class="ms-content-right-main-title-div">“绿色装饰”融入杭州市民中心装饰工程</div>
-                            <div class="ms-content-right-main-icon">
-                                <div class="ms-content-icon-left">
-                                    <div class="ms-content-right-main-icon-source">来源：铭飞
-                                        <span class="ms-content-right-vertical">|</span>
-                                    </div>
-                                    <div class="ms-content-right-main-icon-time">时间：2028-01-01</div>
-                                </div>
-                                <div class="ms-content-icon-right">
-                                    <div class="ms-content-right-main-icon-clicks"></div>
-                                    <div class="ms-content-right-main-icon-num"><script type='text/javascript' src='http://localhost:8080/ms-mcms/basic/191/hit.do'></script>
-                                        <span class="ms-content-right-vertical">|</span>
-                                    </div>
-                                    <div class="ms-content-right-main-icon-comment"></div>
-                                    <div class="ms-content-right-main-icon-num">
-                                        <span style="margin: 0;" v-text="commentsList.length"></span>
-                                        <span class="ms-content-right-vertical">|</span>
-                                    </div>
-                                    <div class="ms-content-right-main-icon-Fabulous"></div>
-                                    <div class="ms-content-right-main-icon-num" v-text="attentionNum"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ms-content-right-main-content">
-                            <p><p><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">日前，公司成功中标杭州市民中心G楼约18000多平方米四层公共区域装饰工程，这是继杭州钱江新城国际会议中心之后的又一城市标志性建筑工程。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">在该项目施工过程中，公司始终将“绿色装饰”理念融入其中。“绿色装饰”是指在设计、装修选材、施工等整个过程都符合绿色环保的理念，把对环 境造成的危害降低到最小，让市民享受到真正的绿色生活。随着社会的不断发展，“绿色装饰”日趋成为广大建筑装饰企业努力的方向。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">公司项目部在杭州市民中心G楼工程中，严格按照健康、环保、安全的施工标准，精心施工，力争达到“浙江省建筑安全文明标化工地”的要求。在原 材料的选用上精挑细选，大量运用了玻璃、大理石材等绿色环保和高品质的装饰材料，突显出了简约、明快、自然的设计风格，创造出宽阔、绿色、实用的公共空 间。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">此外项目部还非常注重采取新工艺、新方法，不仅提高了工程的整体美观性和实用性，而且加快了施工进度，提升了工作效率。由于本工程是圆型结构的楼层施 工，特别是石材在圆弧和圆柱造型上用量大，大大增加了工程的施工难度。因此，项目部按工程施工位置的不同分别采用了石材干挂施工工艺和石材湿贴与灌浆施工 工艺。通过这两种施工工艺铺出来的石材平整、洁净、色泽一致，无裂痕和缺损，既美观又方便今后日常护理。</span><br style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px; white-space: normal;"/><span style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 12px; line-height: 24px;">作为杭州市重点工程，杭州市民中心G楼公共区域装饰工程得到了公司领导的高度重视。总经理高利明亲自坐镇指挥，组建了一支强有力的项目领导管 理班子，采用矩阵式组织管理体系，即采取以项目经理为第一责任人，分解项目绿色施工指标，形成完善的绿色施工组织、责任体系，在保证质量、安全等基本要求 的前提下，通过科学管理和技术进步，最大限度地节约资源与减少对环境负面影响，实现四位一体的绿色环保施工，打造“绿色装饰”精品工程。</span></p></p><br/>
-                        </div>
-                        <div class="metfield">
-					        <p>上一篇：<a href="http://localhost:8080/ms-mcms/html/1/"></a></p>
-					        <p>下一篇：<a href="http://localhost:8080/ms-mcms/html/1/"></a></p>
-					    </div>
-                    </div>
-                    <div class="ms-content-right-main-content-Fabulous">
-                        <div class="ms-content-right-main-content-icon" @click="attentionNews" :class="{'ms-is-attention':isAttention}"></div>
-                    </div>
-                    <div class="ms-content-right-comment">
-                        <div class="ms-content-right-comment-input">
-                            <textarea v-model='isButAttention' class="emotion" type="text" name="comments" placeholder="我有话说..."></textarea>
-                            <div class="ms-content-right-comment-button">
-                                <div class="ms-content-right-comment-expression" id="ms-face"></div>
-                                <div class="ms-content-right-comment-submit" :class="{'ms-submit-comments-css':isButAttention.length>0}" @click="submitComments">提交</div>
-                            </div>
-                        </div>
-                        <div class="ms-content-right-comment-list">
-                            <div class="ms-content-right-comment-list-no-comment" style="display: none;" v-show="commentsList.length == 0">
-                                <img src="http://localhost:8080/ms-mcms/templets/1/default/images/no-comment.png">
-                            </div>
-                            <template v-for="(comments,index) in commentsList">
-                                <div class="ms-content-right-comment-list-div" v-if="index <= listNum">
-                                    <div class="ms-content-right-comment-list-left">
-                                        <div class="ms-content-right-comment-list-portrait">
-                                            <img :src="'http://localhost:8080/ms-mcms'+ comments.puIcon" onerror="this.src='http://cdn.mingsoft.net/global/images/msheader.png'">
-                                        </div>
-                                        <div class="ms-content-right-comment-list-content">
-                                            <div class="ms-content-right-comment-list-name" v-text="comments.puNickname"></div>
-                                            <div class="ms-content-right-comment-list-comment" v-html="vueAnalyticEmotion(comments.commentContent)"></div>
-                                        </div>
-                                    </div>
-                                    <!--<div class="ms-content-right-comment-list-right">
-                                        <div class="ms-content-right-main-icon-comment"></div>
-                                        <div class="ms-content-right-main-icon-Fabulous"></div>
-                                        <div class="ms-content-right-main-icon-num">28</div>
-                                    </div>-->
-                                </div>
-                            </template>
-                            <div class="ms-content-right-comment-list-div ms-content-right-active">
-                                <div class="ms-content-right-comment-list-div-more" @click="listNum = listNum +4" v-show="listNum < commentsList.length">
-                                    查看更多评论
-                                </div>
-                                <div class="ms-content-right-comment-list-div-no" v-show="listNum >= commentsList.length && commentsList.length != 0">
-                                    没有更多评论
-                                </div>
-                                <div class="ms-content-right-comment-list-div-load" style="display: none;">
-                                    <img src="http://localhost:8080/ms-mcms/templets/1/default/images/loading.gif">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-<div class="ms-footer">
-    <div class="ms-footer-content">
-        <div class="ms-footer-left">
-            <div class="ms-footer-left-column">
-                <span class="ms-footer-left-column-about">
-                	<a href='http://localhost:8080/ms-mcms/html/1//53/index.html'>关于我们</a>
-                </span>|
-                <span class="ms-footer-left-column-course">
-                	<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>发展历程</a>
-                </span>|
-                <span class="ms-footer-left-column-contact">
-                	<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>联系我们</a>
-                </span>
-            </div>
-            <span class="ms-footer-left-copyright">版权所有&copy;铭飞科技有限公司2012-2018保留一切权利</span>
-        </div>
-        <div class="ms-footer-right">
-            <img class='ms-footer-right-img-weixin' src="http://localhost:8080/ms-mcms/templets/1/default/images/we-chat.png">
-            <a target="_blank" href='http://tieba.baidu.com/f?kw=%E9%93%AD%E9%A3%9E%E7%A7%91%E6%8A%80&fr=index&fp=0&ie=utf-8'><img class="ms-footer-right-baidu" src="http://localhost:8080/ms-mcms/templets/1/default/images/baidu.png"></a>
-            <a target="_blank" href='http://weibo.com/killfen'><img src="http://localhost:8080/ms-mcms/templets/1/default/images/micro-blog.png"></a>
-        	<div class="ms-footer-right-weixin">
-        		<p></p>
-        		<img alt="" src="http://localhost:8080/ms-mcms/templets/1/default/images/weixin.jpg">
-        	</div>
-        </div>
-    </div>
-</div>
-<script>
-/*导航下拉*/
-$(function(){
-    $(".head-menu-list-li").hover(function(){
-        $(this).find(".head-menu-son-list").fadeToggle();
-    });
-    $('.ms-footer-right-img-weixin').hover(function(){
-    	$('.ms-footer-right-weixin').toggle();
-    });
-});
-
-</script>    </body>
-    <script>
-        var newsShowVue = new Vue({
-            el: "#news-show-vue",
-            data: {
-                commentsList: [], //评论列表
-                attentionNum: 0, //点赞数
-                isAttention: false, //点赞状态
-                isButAttention: '', //按钮状态
-                listNum: 4, //列表数
-                loginStatus: '', //登录状态
-                vueAnalyticEmotion: function(val) {
-                    return AnalyticEmotion(val);
-                },
-            },
-            methods: {
-                //关注或者取消
-                attentionNews: function() {
-                    var obj = this;
-                    if(this.loginStatus != true) {
-                        alert("请先登录后重试");
-                        return;
-                    }
-                    if(obj.isAttention == false) {
-                        $.ajax({
-                            type: "POST",
-                            data: "basicAttentionBasicId=191&basicAttentionType=2",
-                            url: "http://localhost:8080/ms-mcms/people/attention/save.do",
-                            success: function(msg) {
-                                if(msg.result) {
-                                    obj.attentionNum++;
-                                    obj.isAttention = true;
-                                }
-                            },
-                            error: function() {
-                                alert("操作失败，请检查是否已经安装关注插件");
-                            }
-                        })
-                    } else {
-                        $.ajax({
-                            type: "POST",
-                            data: "basicId=191&basicAttentionType=2",
-                            url: "http://localhost:8080/ms-mcms/people/attention/delete.do",
-                            success: function(msg) {
-                                if(msg.result) {
-                                    obj.attentionNum--;
-                                    obj.isAttention = false;
-                                }
-                            },
-                            error: function() {
-                                alert("操作失败，请检查是否已经安装关注插件");
-                            }
-                        })
-                    }
-                },
-                //关注
-                list: function() {
-                    var obj = this;
-                    $.ajax({
-                        type: "POST",
-                        data: "commentBasicId=191",
-                        url: "http://localhost:8080/ms-mcms/comment/list.do",
-                        success: function(msg) {
-                            obj.commentsList = msg.list;
-                        }
-                    })
-                },
-                //提交
-                submitComments: function() {
-                    if(this.isButAttention == '') {
-                        return;
-                    }
-                    if(this.loginStatus != true) {
-                        alert("请先登录后重试");
-                        return;
-                    }
-                    var obj = this;
-                    $.ajax({
-                        type: "POST",
-                        data: "commentContent=" + $("textarea[name=comments]").val() + "&isCode=false&commentBasicId=191",
-                        url: "http://localhost:8080/ms-mcms/people/comment/save.do",
-                        success: function(msg) {
-                            if(msg.result) {
-                                alert("评论成功");
-                                obj.list();
-                            } else {
-                                alert(msg.resultMsg);
-                            }
-                            obj.isButAttention = '';
-                        },
-                        error: function() {
-                            alert("评论失败，请检查是否已经安装评论插件");
-                        },
-                    })
-                }
-            },
-            mounted: function() {
-                $('#ms-face').SinaEmotion($('.emotion'));
-                var obj = this;
-                //登录状态
-                $.ajax({
-                    type: "POST",
-                    url: "http://localhost:8080/ms-mcms/checkLoginStatus.do",
-                    success: function(msg) {
-                        obj.loginStatus = msg.result;
-                    }
-                })
-
-                //关注数
-                $.ajax({
-                    type: "POST",
-                    data: "basicAttentionBasicId=191&basicAttentionType=2",
-                    url: "http://localhost:8080/ms-mcms/attention/count.do",
-                    success: function(msg) {
-                        obj.attentionNum = msg;
-                    }
-                })
-                //是否关注了
-                $.ajax({
-                    type: "POST",
-                    data: "basicAttentionBasicId=191&basicAttentionType=2",
-                    url: "http://localhost:8080/ms-mcms/people/attention/isExists.do",
-                    success: function(msg) {
-                        obj.isAttention = msg.result;
-                    }
-                })
-            },
-            beforeCreate: function() {
-                var obj = this;
-                var app_id = '1362404091';
-                $.ajax({
-                    async: true,
-                    dataType: 'jsonp',
-                    url: 'https://api.weibo.com/2/emotions.json?source=' + app_id,
-                    success: function(response) {
-                        var data = response.data;
-                        for(var i in data) {
-                            if(data[i].category == '') {
-                                data[i].category = '默认';
-                            }
-                            if(emotions[data[i].category] == undefined) {
-                                emotions[data[i].category] = new Array();
-                                categorys.push(data[i].category);
-                            }
-                            emotions[data[i].category].push({
-                                name: data[i].phrase,
-                                icon: data[i].icon
-                            });
-                            uSinaEmotionsHt.put(data[i].phrase, data[i].icon);
-                        }
-                        obj.list();
-                    }
-                });
-            },
-        })
-    </script>
-
+    var CATID = "17",
+      BCID = "17",
+      SUBCATFIXED = 1, //悬浮
+      NAVLEFTC = "#c2c2c2", //导航左侧边线
+      NAVHOVER = "",
+      NAVCHILDER = "",
+      MAP = "/map/index.html", //网站地图
+      ONCONTEXT = 1, //禁止右键
+      ONCOPY = 1, //禁止复制
+      ONSELECT = 1; //禁止选择
+    $("#17").attr("class", "on");
+  </script>
+</body>
 </html>

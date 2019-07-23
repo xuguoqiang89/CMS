@@ -176,7 +176,6 @@
             login: function () {
                 var target = this;
                 if (this.checkPeoplePassword() && this.checkPeopleName() && this.checkPeopleCode) {
-                    debugger;
                     target.butState = '登录中...';
                     $.ajax({
                         type: "post",

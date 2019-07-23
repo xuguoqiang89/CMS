@@ -1,0 +1,20 @@
+﻿@charset "utf-8";
+.header .search .subbth{background:#6ccff7 url(../images/search.png) no-repeat 10px 7px;}
+.con-left .subcat .sub-tit,
+.con-left .subcat ul li i,
+.nav ul li.on .childer,
+.pages a.curr,.pro-layer-detail .detail-right .links a.l-url{background:#6ccff7;}
+a:hover,
+.con-left .subcat ul li:hover a,
+.con-left .subcat ul li.on a,
+.con-left .subcat ul.subTree li.on .Treetwo li.onn a,
+.con-left .subcat ul.subTree li.on .Treetwo li a:hover,
+.nav ul li.on a,
+.nav ul li.on .childer a:hover,
+.product-list ul li span.ico-detail i,
+.con-left .subtac strong,
+.ques-list ul li.on h5,
+.ques-list ul li.on span.deta{color:#6ccff7;}
+.download-list ul li:hover,
+.team-list ul li:hover,
+.pages a.curr{border-color:#6ccff7;}
